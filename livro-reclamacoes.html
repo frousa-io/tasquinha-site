@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livro de Reclamações · Tasquinha do Brasileiro</title>
+<meta name="description" content="Livro de Reclamações da Tasquinha do Brasileiro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.ttf) format("truetype");font-weight:300;font-style:oblique;font-display:swap}
+:root{--bordo:#7A1A24;--cream:#F3EADB;--ink:#2a1417;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:72px;--s7:112px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;background:var(--cream);color:var(--bordo);font-family:MetaforaLight,serif;font-size:14px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--bordo);outline-offset:4px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 var(--s3)}
+h1{font-family:Metafora,serif;font-weight:700;line-height:1.2;letter-spacing:.06em;margin:0}
+h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-style:normal;line-height:1.2;letter-spacing:.04em;margin:0}
+h2{font-size:clamp(24px,4vw,34px)}
+h3{font-size:18px;letter-spacing:.1em}
+.kicker{font-size:11px;letter-spacing:.2em;margin:0 0 var(--s2)}
+.label{font-size:13px;letter-spacing:.22em;margin:0 0 var(--s2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:0;cursor:pointer;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
+.btn.line{background:transparent;color:var(--bordo);border:1px solid var(--bordo)}
+.legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2) var(--s3);font-size:10px;letter-spacing:.14em}
+.legal-links a{text-decoration:none;border-bottom:1px solid rgba(122,26,36,.3)}
+.foot{background:var(--bordo);color:var(--cream);padding:var(--s6) var(--s3) var(--s5);text-align:center;text-transform:none;letter-spacing:.03em;font-family:MetaforaLight,serif;font-size:13px;line-height:1.7}
+.foot-logo{width:96px;height:auto;margin:0 auto var(--s3)}
+.sec h2::after{content:"";display:block;width:88px;height:2px;background:#B8914A;margin:var(--s3) auto 0}
+.cater{text-align:center}
+.cater-txt{max-width:640px;margin:var(--s4) auto 0}
+.cater-txt p{font-family:MetaforaLight,serif;font-size:15px;line-height:1.5;letter-spacing:.06em;margin:0 0 var(--s3)}
+.marquee{overflow:hidden;margin:var(--s5) calc(var(--s3)*-1) 0;width:calc(100% + var(--s3)*2);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%)}
+.track{display:flex;gap:16px;width:max-content;will-change:transform}
+.tile{flex:0 0 auto;width:260px;aspect-ratio:4/5;margin:0;border-radius:14px;overflow:hidden;background:rgba(122,26,36,.06)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.cater-note{margin:var(--s4) 0 0;font-family:MetaforaLight,serif;font-size:15px;letter-spacing:.04em;line-height:1.5;text-transform:none}
+.cater-note a{color:var(--bordo);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:767px){.tile{width:220px}}
+.modal{position:fixed;inset:0;z-index:90;background:rgba(42,20,23,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal[hidden]{display:none}
+.modal *{text-transform:uppercase}
+.modal-box{position:relative;display:flex;background:var(--cream);border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow:hidden;text-align:left;letter-spacing:.02em;line-height:1.5}
+.mbody{flex:1;min-width:0;overflow-y:auto;max-height:88vh;padding:48px 28px 28px;scrollbar-width:none}
+.mbody::-webkit-scrollbar{display:none}
+.mrail{position:relative;flex:0 0 4px;width:4px;margin:56px 12px 32px 0;background:rgba(122,26,36,.14);border-radius:4px}
+.mthumb{position:absolute;left:0;right:0;top:0;height:40px;background:var(--bordo);border-radius:4px}
+.modal-x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:30px;line-height:1;color:var(--bordo);cursor:pointer;padding:4px 8px}
+.modal-h{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:34px;text-align:center;margin:0 0 var(--s3);letter-spacing:.02em}
+.mcat{margin-bottom:var(--s4)}
+.mcat h3{font-size:18px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 var(--s1);padding-bottom:6px;border-bottom:1px solid rgba(122,26,36,.22)}
+.mcat ul{list-style:none;margin:0;padding:0}
+.mreg{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin:var(--s4) 0 var(--s1);color:var(--bordo)}
+.mcat li{display:flex;flex-direction:column;padding:8px 0;border-bottom:1px dotted rgba(122,26,36,.14);font-family:DecimaPro,sans-serif;font-size:16px;letter-spacing:.02em}
+.mcat li small{font-family:MetaforaLight,serif;font-size:12px;font-style:italic;opacity:.8;letter-spacing:.02em;margin-top:-4px}
+.mnote{font-family:MetaforaLight,serif;font-size:13px;font-style:italic;opacity:.85;margin:var(--s2) 0 0;text-align:left}
+.natal-grid{display:grid;gap:var(--s3);margin-top:var(--s4)}
+.ncard{border:1px solid rgba(122,26,36,.25);border-radius:16px;padding:var(--s4) var(--s3);text-align:center;cursor:pointer;transition:background .3s}
+.ncard:hover,.ncard:focus-visible{background:rgba(122,26,36,.06);outline:none}
+.ncard .nlab{font-size:11px;letter-spacing:.16em;margin:0}
+.ncard h3{font-size:22px;letter-spacing:.06em;margin:var(--s1) 0}
+.nprice{font-family:Metafora,serif;font-weight:700;font-size:20px;margin:0 0 var(--s2)}
+.nprice span{font-family:MetaforaLight,serif;font-weight:400;font-size:12px}
+.ncard p.ndesc{font-family:MetaforaLight,serif;font-size:14px;line-height:1.5;margin:0}
+.ntext{font-family:MetaforaLight,serif;font-size:15px;line-height:1.5;max-width:640px;margin:var(--s3) auto 0;text-align:center}
+.mprice{font-family:Metafora,serif;font-weight:700;font-size:16px;text-align:center;margin:0 0 var(--s3)}
+@media (min-width:768px){.natal-grid{grid-template-columns:1fr 1fr}}
+.natal{background:var(--bordo);color:var(--cream)}
+.natal .wrap{text-align:center}
+.natal h2{color:var(--cream)}
+.natal .label{color:#D4A94F}
+.natal .ntext{color:var(--cream)}
+.natal .btn.line{color:var(--cream);border-color:var(--cream)}
+.ncard{color:var(--cream);border-color:rgba(243,234,219,.35)}
+.ncard:hover,.ncard:focus-visible{background:rgba(243,234,219,.08)}
+.ncard .nico{display:block;margin:0 auto var(--s1);width:56px;height:auto}
+.ncard.gold .nico{width:44px}
+.ncard.gold{background:linear-gradient(135deg,#F0D38A 0%,#D4A94F 55%,#B8862E 100%);color:var(--bordo);border-color:transparent;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.ncard.gold:hover,.ncard.gold:focus-visible{background:linear-gradient(135deg,#F6DE9E 0%,#DDB35F 55%,#C4923A 100%)}
+.ncard.gold .nlab{color:var(--bordo)}
+.nsm{font-size:12px;letter-spacing:.04em}
+.nnovo strong{font-family:Metafora,serif;font-weight:700;color:#D4A94F;font-size:17px;letter-spacing:.04em}
+.xmas-bar{position:absolute;top:0;left:0;right:0;min-height:40px;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:12px;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;text-align:center;padding:8px 16px;overflow:hidden;white-space:nowrap}
+.xmas-bar strong{font-weight:400;color:#E2C47E}
+.xmas-bar .xn{display:inline-flex;align-items:center;gap:10px}
+.xmas-bar .xstar{width:12px;height:12px;margin:0}
+.xmas-bar .tk{display:inline-flex;flex:0 0 auto;white-space:nowrap}
+.xmas-bar .xc,.xmas-bar .xc>*{flex:0 0 auto}
+.xmas-bar .xc{display:inline-flex;align-items:center;gap:10px;padding-right:56px}
+.xmas-bar .xc[aria-hidden]{display:none}
+.xmas-bar:hover{background:#6a1420}
+@media (max-width:767px){.xmas-bar{justify-content:flex-start;font-size:11px;letter-spacing:.1em;padding:0}.xmas-bar .xc[aria-hidden]{display:inline-flex}.xmas-bar .tk{animation:xtick 14s linear infinite}}
+@keyframes xtick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mlegal{font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.06em;line-height:1.6;opacity:.85;margin:var(--s3) 0 0;text-align:left}
+.modal-cta{text-align:center;margin-top:var(--s3)}
+.modal-soon{text-align:center;font-family:MetaforaLight,serif;font-size:15px;margin:0 0 var(--s2)}
+.card[data-open]{cursor:pointer}
+.card .img img{transition:transform .45s ease}
+.card h3,.card p,.card a.cta{transition:transform .3s ease;transform-origin:left center}
+.card h3{margin-bottom:-10px}
+.card[data-open]:hover .img img,.card[data-open]:focus-visible .img img{transform:scale(1.06)}
+.card[data-open]:hover h3,.card[data-open]:focus-visible h3{transform:scale(1.06)}
+.card[data-open]:hover p,.card[data-open]:focus-visible p{transform:scale(1.03)}
+.card[data-open]:focus-visible{outline:2px solid var(--bordo);outline-offset:6px;border-radius:14px}
+.foot-cols{display:grid;gap:var(--s4);text-align:left;margin-bottom:var(--s5)}
+.foot{--gold:#D4A94F}
+.foot a{transition:color .2s ease}
+.foot a:hover,.foot a:focus-visible{color:var(--gold)}
+.hrs{margin:0;font-family:MetaforaLight,serif;font-size:16px;letter-spacing:.03em;text-transform:none;line-height:1.6}
+.foot-cols .fc{display:flex;flex-direction:column;gap:var(--s1);align-items:flex-start}
+.fh{font-family:"Cormorant Garamond",Georgia,serif;font-style:normal;font-size:19px;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin:0 0 4px;font-weight:700;line-height:1.2}
+.addrbox{display:flex;flex-direction:column;gap:0}
+.hbox,.telbox{display:flex;flex-direction:column;gap:0}
+.hrs2{margin:-2px 0 0;font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.02em;text-transform:none;opacity:.75;line-height:1.4}
+.hrs strong{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.03em}
+.foot a{color:var(--cream)}
+.foot .addr{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.03em;text-transform:none;text-decoration:none;line-height:1.25}
+.foot .landmark{font-size:11px;opacity:.75;letter-spacing:.02em;text-transform:none;margin:3px 0 0;line-height:1.4}
+.foot .tel{font-family:Metafora,serif;font-size:16px;letter-spacing:.04em;text-decoration:none;text-transform:none;line-height:1.6}
+.foot .legal-line{font-size:11px;opacity:.75;margin:-2px 0 0;letter-spacing:.02em;text-transform:none}
+.foot .fic{justify-content:flex-start;margin:var(--s2) 0 0;gap:var(--s3);color:var(--cream)}
+.foot .fic .ic{width:auto;height:auto;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease}
+.foot .fic .ic:hover{background:none;color:var(--gold)}
+.foot-bottom{text-align:center}
+@media (min-width:768px){.foot-cols{grid-template-columns:repeat(3,1fr);gap:var(--s5)}}
+.foot-info{margin:0 0 var(--s4);font-size:13px;opacity:.85}
+.foot .legal-links{gap:var(--s1) var(--s3);font-size:12px;letter-spacing:.02em}
+.foot .legal-links a{border-bottom:0;color:var(--cream);opacity:.85}
+.foot .legal-links a:hover{opacity:1;text-decoration:underline}
+.foot .legal-links .sep{opacity:.6}
+@media (max-width:767px){.foot .legal-links{flex-wrap:nowrap;gap:6px;font-size:10px;letter-spacing:0}.foot .legal-links a{white-space:nowrap}}
+.cookie{position:fixed;left:var(--s2);right:var(--s2);bottom:var(--s2);max-width:300px;margin:0;z-index:80;background:var(--bordo);color:var(--cream);border-radius:12px;padding:12px 14px;display:none;box-shadow:0 8px 20px rgba(42,20,23,.2)}
+@media (min-width:768px){.cookie{left:var(--s4);right:auto;bottom:var(--s4)}}
+.cookie.show{display:block}
+.cookie p{margin:0 0 10px;font-size:11px;line-height:1.5;letter-spacing:.04em;text-transform:none}
+.cookie .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cookie button{height:32px;padding:0 var(--s3);border-radius:999px;border:1px solid var(--cream);background:var(--cream);color:var(--bordo);font-family:DecimaPro,sans-serif;font-size:12px;letter-spacing:.12em;cursor:pointer}
+.cookie a{font-size:10px;letter-spacing:.12em;color:var(--cream)}
+
+.top{padding:var(--s3) 0;border-bottom:1px solid rgba(122,26,36,.14)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s2)}
+.top img{height:44px;width:auto}
+.top a.back{font-size:11px;letter-spacing:.16em;text-decoration:none}
+.doc{padding:var(--s6) 0 var(--s5)}
+.doc h1{font-size:clamp(28px,5vw,42px);margin:0 0 var(--s2)}
+.doc .meta{font-size:10px;letter-spacing:.14em;margin:0 0 var(--s5)}
+.doc h2{font-size:20px;margin:var(--s5) 0 var(--s2)}
+.doc p,.doc li{font-size:13px;line-height:1.85;letter-spacing:.08em;margin:0 0 var(--s2);text-transform:none}
+.doc ul{padding-left:20px;margin:0 0 var(--s2)}
+.doc .ph{background:rgba(122,26,36,.08);padding:2px 6px;border-radius:4px;letter-spacing:.04em}
+.doc .box{border:1px solid rgba(122,26,36,.2);border-radius:14px;padding:var(--s3);margin:var(--s4) 0}
+.doc .btn{margin-top:var(--s2)}
+.lb[hidden]{display:none}
+.doc .lb h1{font-size:clamp(28px,5vw,42px);margin:0 0 var(--s2)}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a href="index.html"><img src="assets/logo.svg" alt="Tasquinha do Brasileiro"></a>
+  <a class="back" href="index.html" data-i18n="backL">← Início</a>
+</div></header>
+<main class="wrap doc">
+<div class="lb" data-l="pt">
+  <h1>Livro de Reclamações</h1>
+  <p class="meta">Última atualização: [data]</p>
+  <h2>Livro de Reclamações</h2>
+<p>Pode apresentar a sua reclamação no Livro de Reclamações eletrónico, disponível em <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. Também pode solicitar o livro físico a qualquer colaborador do estabelecimento.</p>
+<div class="box"><p><strong>Estabelecimento:</strong> Tasquinha do Brasileiro, Rua Camilo Castelo Branco, 3510-427 Viseu.</p><p><strong>NIF:</strong> [a preencher]</p><a class="btn" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Apresentar reclamação</a></div>
+<h2>Antes de reclamar</h2>
+<p>Se tiver um problema com uma reserva, um pedido ou a sua visita, também pode contactar-nos diretamente pelo WhatsApp: +351 928 057 856.</p>
+</div>
+<div class="lb" data-l="en" hidden>
+  <h1>Complaints Book</h1>
+  <p class="meta">Last updated: [date]</p>
+  <h2>Complaints Book</h2>
+<p>You can submit your complaint in the electronic Complaints Book at <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. You can also ask any member of staff for the physical book. The Complaints Book is in Portuguese.</p>
+<div class="box"><p><strong>Business:</strong> Tasquinha do Brasileiro, Rua Camilo Castelo Branco, 3510-427 Viseu, Portugal.</p><p><strong>VAT/NIF:</strong> [to be filled in]</p><a class="btn" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Submit a complaint</a></div>
+<h2>Before you complain</h2>
+<p>If you have a problem with a booking, an order or your visit, you can also contact us directly on WhatsApp: +351 928 057 856.</p>
+</div>
+<div class="lb" data-l="es" hidden>
+  <h1>Libro de Reclamaciones</h1>
+  <p class="meta">Última actualización: [fecha]</p>
+  <h2>Libro de Reclamaciones</h2>
+<p>Puede presentar su reclamación en el Libro de Reclamaciones electrónico, disponible en <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. También puede pedir el libro físico a cualquier empleado del establecimiento. El Libro de Reclamaciones está en portugués.</p>
+<div class="box"><p><strong>Establecimiento:</strong> Tasquinha do Brasileiro, Rua Camilo Castelo Branco, 3510-427 Viseu, Portugal.</p><p><strong>NIF:</strong> [por completar]</p><a class="btn" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Presentar reclamación</a></div>
+<h2>Antes de reclamar</h2>
+<p>Si tiene un problema con una reserva, un pedido o su visita, también puede contactarnos directamente por WhatsApp: +351 928 057 856.</p>
+</div>
+<div class="lb" data-l="fr" hidden>
+  <h1>Livre de réclamations</h1>
+  <p class="meta">Dernière mise à jour : [date]</p>
+  <h2>Livre de réclamations</h2>
+<p>Vous pouvez déposer votre réclamation dans le Livre de réclamations électronique, disponible sur <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">www.livroreclamacoes.pt</a>. Vous pouvez aussi demander le livre physique à tout membre du personnel. Le Livre de réclamations est rédigé en portugais.</p>
+<div class="box"><p><strong>Établissement :</strong> Tasquinha do Brasileiro, Rua Camilo Castelo Branco, 3510-427 Viseu, Portugal.</p><p><strong>NIF :</strong> [à compléter]</p><a class="btn" href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">Déposer une réclamation</a></div>
+<h2>Avant de réclamer</h2>
+<p>Si vous rencontrez un problème avec une réservation, une commande ou votre visite, vous pouvez aussi nous contacter directement sur WhatsApp : +351 928 057 856.</p>
+</div>
+</main>
+<footer class="foot">
+  <img class="foot-logo" src="assets/logo-light.svg" alt="Tasquinha do Brasileiro">
+  <p class="foot-info">© 2026 Tasquinha do Brasileiro<br>Viseu, Portugal</p>
+  <nav class="legal-links" aria-label="Legal">
+  <a href="politica-privacidade.html" data-i18n="legalPriv">Política de Privacidade</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="politica-cookies.html" data-i18n="legalCook">Política de Cookies</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="termos-condicoes.html" data-i18n="legalTerms">Termos e Condições</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="livro-reclamacoes.html" data-i18n="legalComp">Livro de Reclamações</a>
+</nav>
+</footer>
+
+<div class="cookie" role="region" aria-label="Cookies">
+  <p data-i18n="cookieT">Este site usa apenas cookies técnicos e essenciais. Não usa cookies de publicidade nem de análise.</p>
+  <div class="row"><button type="button" data-i18n="cookieOk">Entendi</button><a href="politica-cookies.html" data-i18n="cookieLink">Política de Cookies</a></div>
+</div>
+<script>
+(function(){
+  const nav=document.querySelector('.nav');
+  const hero=document.getElementById('inicio');
+  const onScroll=()=>{ if(!nav) return; const on=!hero || window.scrollY > hero.offsetHeight - 72; nav.classList.toggle('scrolled', on); nav.classList.toggle('past', on); const xb=document.querySelector('.xmas-bar'); nav.style.top=Math.max(0,(xb?xb.offsetHeight:0)-window.scrollY)+'px'; };
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll();
+  const burger=document.querySelector('.burger');
+  if(burger) burger.addEventListener('click',()=>{ nav.classList.toggle('open'); burger.setAttribute('aria-expanded', nav.classList.contains('open')); });
+  document.querySelectorAll('.nav ul a').forEach(a=>a.addEventListener('click',()=>{ nav.classList.remove('open'); if(burger) burger.setAttribute('aria-expanded','false'); }));
+  const KEY='tb-cookie-ok';
+  let seen=false; try{ seen=!!localStorage.getItem(KEY); }catch(e){}
+  const bar=document.querySelector('.cookie');
+  if(bar && !seen) bar.classList.add('show');
+  const ok=document.querySelector('.cookie button');
+  if(ok) ok.addEventListener('click',()=>{ try{ localStorage.setItem(KEY,'1'); }catch(e){} bar.classList.remove('show'); });
+})();
+
+const I18N = {
+ pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Preparada ao jeito do brasileiro",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições e Petiscos",m1p:"Pratos e petiscos para comer em qualquer hora.",m2t:"Garrafeira",m2p:"Uma garrafeira selecionada para acompanhar os melhores momentos.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
+ en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Dishes and petiscos to eat at any time of day.",m2t:"Drinks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
+ es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Bebidas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
+ fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Boissons",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
+};
+(function(){
+  let code='pt';
+  try{
+    const list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'pt'];
+    const f=list.map(l=>String(l).slice(0,2).toLowerCase()).find(l=>I18N[l]);
+    if(f) code=f;
+  }catch(e){}
+  document.documentElement.lang=code;
+  const t=I18N[code];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(t[k]!==undefined) el.textContent=t[k]; });
+  document.querySelectorAll('.lb').forEach(el=>{ el.hidden = el.dataset.l!==code; });
+})();</script>
+</body>
+</html>

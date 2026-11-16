@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasquinha do Brasileiro</title>
+<meta name="description" content="Tasquinha do Brasileiro, Viseu. Cozinha portuguesa tradicional desde 1965. Reservas e take-away pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.ttf) format("truetype");font-weight:700;font-display:swap}
+@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.ttf) format("truetype");font-weight:300;font-style:oblique;font-display:swap}
+:root{--bordo:#7A1A24;--cream:#F3EADB;--ink:#2a1417;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:72px;--s7:112px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;background:var(--cream);color:var(--bordo);font-family:MetaforaLight,serif;font-size:14px;line-height:1.7;letter-spacing:.12em;text-transform:uppercase}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:2px solid var(--bordo);outline-offset:4px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 var(--s3)}
+h1{font-family:Metafora,serif;font-weight:700;line-height:1.2;letter-spacing:.06em;margin:0}
+h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-style:normal;line-height:1.2;letter-spacing:.04em;margin:0}
+h2{font-size:clamp(24px,4vw,34px)}
+h3{font-size:18px;letter-spacing:.1em}
+.kicker{font-size:11px;letter-spacing:.2em;margin:0 0 var(--s2)}
+.label{font-size:13px;letter-spacing:.22em;margin:0 0 var(--s2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:0;cursor:pointer;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
+.btn.line{background:transparent;color:var(--bordo);border:1px solid var(--bordo)}
+.legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2) var(--s3);font-size:10px;letter-spacing:.14em}
+.legal-links a{text-decoration:none;border-bottom:1px solid rgba(122,26,36,.3)}
+.foot{background:var(--bordo);color:var(--cream);padding:var(--s6) var(--s3) var(--s5);text-align:center;text-transform:none;letter-spacing:.03em;font-family:MetaforaLight,serif;font-size:13px;line-height:1.7}
+.foot-logo{width:96px;height:auto;margin:0 auto var(--s3)}
+.sec h2::after{content:"";display:block;width:88px;height:2px;background:#B8914A;margin:var(--s3) auto 0}
+.cater{text-align:center}
+.cater-txt{max-width:640px;margin:var(--s4) auto 0}
+.cater-txt p{font-family:MetaforaLight,serif;font-size:15px;line-height:1.5;letter-spacing:.06em;margin:0 0 var(--s3)}
+.marquee{overflow:hidden;margin:var(--s5) calc(var(--s3)*-1) 0;width:calc(100% + var(--s3)*2);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%)}
+.track{display:flex;gap:16px;width:max-content;will-change:transform}
+.tile{flex:0 0 auto;width:260px;aspect-ratio:4/5;margin:0;border-radius:14px;overflow:hidden;background:rgba(122,26,36,.06)}
+.tile img{width:100%;height:100%;object-fit:cover;display:block}
+.cater-note{margin:var(--s4) 0 0;font-family:MetaforaLight,serif;font-size:15px;letter-spacing:.04em;line-height:1.5;text-transform:none}
+.cater-note a{color:var(--bordo);text-decoration:underline;text-underline-offset:3px}
+@media (max-width:767px){.tile{width:220px}}
+.modal{position:fixed;inset:0;z-index:90;background:rgba(42,20,23,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+.modal[hidden]{display:none}
+.modal *{text-transform:uppercase}
+.modal-box{position:relative;display:flex;background:var(--cream);border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow:hidden;text-align:left;letter-spacing:.02em;line-height:1.5}
+.mbody{flex:1;min-width:0;overflow-y:auto;max-height:88vh;padding:48px 28px 28px;scrollbar-width:none}
+.mbody::-webkit-scrollbar{display:none}
+.mrail{position:relative;flex:0 0 4px;width:4px;margin:56px 12px 32px 0;background:rgba(122,26,36,.14);border-radius:4px}
+.mthumb{position:absolute;left:0;right:0;top:0;height:40px;background:var(--bordo);border-radius:4px}
+.modal-x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:30px;line-height:1;color:var(--bordo);cursor:pointer;padding:4px 8px}
+.modal-h{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:34px;text-align:center;margin:0 0 var(--s3);letter-spacing:.02em}
+.mcat{margin-bottom:var(--s4)}
+.mcat h3{font-size:18px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 var(--s1);padding-bottom:6px;border-bottom:1px solid rgba(122,26,36,.22)}
+.mcat ul{list-style:none;margin:0;padding:0}
+.mreg{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin:var(--s4) 0 var(--s1);color:var(--bordo)}
+.mcat li{display:flex;flex-direction:column;padding:8px 0;border-bottom:1px dotted rgba(122,26,36,.14);font-family:DecimaPro,sans-serif;font-size:16px;letter-spacing:.02em}
+.mcat li small{font-family:MetaforaLight,serif;font-size:12px;font-style:italic;opacity:.8;letter-spacing:.02em;margin-top:-4px}
+.mnote{font-family:MetaforaLight,serif;font-size:13px;font-style:italic;opacity:.85;margin:var(--s2) 0 0;text-align:left}
+.natal-grid{display:grid;gap:var(--s3);margin-top:var(--s4)}
+.ncard{border:1px solid rgba(122,26,36,.25);border-radius:16px;padding:var(--s4) var(--s3);text-align:center;cursor:pointer;transition:background .3s}
+.ncard:hover,.ncard:focus-visible{background:rgba(122,26,36,.06);outline:none}
+.ncard .nlab{font-size:11px;letter-spacing:.16em;margin:0}
+.ncard h3{font-size:22px;letter-spacing:.06em;margin:var(--s1) 0}
+.nprice{font-family:Metafora,serif;font-weight:700;font-size:20px;margin:0 0 var(--s2)}
+.nprice span{font-family:MetaforaLight,serif;font-weight:400;font-size:12px}
+.ncard p.ndesc{font-family:MetaforaLight,serif;font-size:14px;line-height:1.5;margin:0}
+.ntext{font-family:MetaforaLight,serif;font-size:15px;line-height:1.5;max-width:640px;margin:var(--s3) auto 0;text-align:center}
+.mprice{font-family:Metafora,serif;font-weight:700;font-size:16px;text-align:center;margin:0 0 var(--s3)}
+@media (min-width:768px){.natal-grid{grid-template-columns:1fr 1fr}}
+.natal{background:var(--bordo);color:var(--cream)}
+.natal .wrap{text-align:center}
+.natal h2{color:var(--cream)}
+.natal .label{color:#D4A94F}
+.natal .ntext{color:var(--cream)}
+.natal .btn.line{color:var(--cream);border-color:var(--cream)}
+.ncard{color:var(--cream);border-color:rgba(243,234,219,.35)}
+.ncard:hover,.ncard:focus-visible{background:rgba(243,234,219,.08)}
+.ncard .nico{display:block;margin:0 auto var(--s1);width:56px;height:auto}
+.ncard.gold .nico{width:44px}
+.ncard.gold{background:linear-gradient(135deg,#F0D38A 0%,#D4A94F 55%,#B8862E 100%);color:var(--bordo);border-color:transparent;box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.ncard.gold:hover,.ncard.gold:focus-visible{background:linear-gradient(135deg,#F6DE9E 0%,#DDB35F 55%,#C4923A 100%)}
+.ncard.gold .nlab{color:var(--bordo)}
+.nsm{font-size:12px;letter-spacing:.04em}
+.nnovo strong{font-family:Metafora,serif;font-weight:700;color:#D4A94F;font-size:17px;letter-spacing:.04em}
+.xmas-bar{position:absolute;top:0;left:0;right:0;min-height:40px;z-index:60;display:flex;align-items:center;justify-content:center;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:12px;letter-spacing:.14em;line-height:1.5;text-transform:uppercase;text-align:center;padding:8px 16px;overflow:hidden;white-space:nowrap}
+.xmas-bar strong{font-weight:400;color:#E2C47E}
+.xmas-bar .xn{display:inline-flex;align-items:center;gap:10px}
+.xmas-bar .xstar{width:12px;height:12px;margin:0}
+.xmas-bar .tk{display:inline-flex;flex:0 0 auto;white-space:nowrap}
+.xmas-bar .xc,.xmas-bar .xc>*{flex:0 0 auto}
+.xmas-bar .xc{display:inline-flex;align-items:center;gap:10px;padding-right:56px}
+.xmas-bar .xc[aria-hidden]{display:none}
+.xmas-bar:hover{background:#6a1420}
+@media (max-width:767px){.xmas-bar{justify-content:flex-start;font-size:11px;letter-spacing:.1em;padding:0}.xmas-bar .xc[aria-hidden]{display:inline-flex}.xmas-bar .tk{animation:xtick 14s linear infinite}}
+@keyframes xtick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mlegal{font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.06em;line-height:1.6;opacity:.85;margin:var(--s3) 0 0;text-align:left}
+.modal-cta{text-align:center;margin-top:var(--s3)}
+.modal-soon{text-align:center;font-family:MetaforaLight,serif;font-size:15px;margin:0 0 var(--s2)}
+.card[data-open]{cursor:pointer}
+.card .img img{transition:transform .45s ease}
+.card h3,.card p,.card a.cta{transition:transform .3s ease;transform-origin:left center}
+.card h3{margin-bottom:-10px}
+.card[data-open]:hover .img img,.card[data-open]:focus-visible .img img{transform:scale(1.06)}
+.card[data-open]:hover h3,.card[data-open]:focus-visible h3{transform:scale(1.06)}
+.card[data-open]:hover p,.card[data-open]:focus-visible p{transform:scale(1.03)}
+.card[data-open]:focus-visible{outline:2px solid var(--bordo);outline-offset:6px;border-radius:14px}
+.foot-cols{display:grid;gap:var(--s4);text-align:left;margin-bottom:var(--s5)}
+.foot{--gold:#D4A94F}
+.foot a{transition:color .2s ease}
+.foot a:hover,.foot a:focus-visible{color:var(--gold)}
+.hrs{margin:0;font-family:MetaforaLight,serif;font-size:16px;letter-spacing:.03em;text-transform:none;line-height:1.6}
+.foot-cols .fc{display:flex;flex-direction:column;gap:var(--s1);align-items:flex-start}
+.fh{font-family:"Cormorant Garamond",Georgia,serif;font-style:normal;font-size:19px;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin:0 0 4px;font-weight:700;line-height:1.2}
+.addrbox{display:flex;flex-direction:column;gap:0}
+.hbox,.telbox{display:flex;flex-direction:column;gap:0}
+.hrs2{margin:-2px 0 0;font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.02em;text-transform:none;opacity:.75;line-height:1.4}
+.hrs strong{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.03em}
+.foot a{color:var(--cream)}
+.foot .addr{font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.03em;text-transform:none;text-decoration:none;line-height:1.25}
+.foot .landmark{font-size:11px;opacity:.75;letter-spacing:.02em;text-transform:none;margin:3px 0 0;line-height:1.4}
+.foot .tel{font-family:Metafora,serif;font-size:16px;letter-spacing:.04em;text-decoration:none;text-transform:none;line-height:1.6}
+.foot .legal-line{font-size:11px;opacity:.75;margin:-2px 0 0;letter-spacing:.02em;text-transform:none}
+.foot .fic{justify-content:flex-start;margin:var(--s2) 0 0;gap:var(--s3);color:var(--cream)}
+.foot .fic .ic{width:auto;height:auto;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease}
+.foot .fic .ic:hover{background:none;color:var(--gold)}
+.foot-bottom{text-align:center}
+@media (min-width:768px){.foot-cols{grid-template-columns:repeat(3,1fr);gap:var(--s5)}}
+.foot-info{margin:0 0 var(--s4);font-size:13px;opacity:.85}
+.foot .legal-links{gap:var(--s1) var(--s3);font-size:12px;letter-spacing:.02em}
+.foot .legal-links a{border-bottom:0;color:var(--cream);opacity:.85}
+.foot .legal-links a:hover{opacity:1;text-decoration:underline}
+.foot .legal-links .sep{opacity:.6}
+@media (max-width:767px){.foot .legal-links{flex-wrap:nowrap;gap:6px;font-size:10px;letter-spacing:0}.foot .legal-links a{white-space:nowrap}}
+.cookie{position:fixed;left:var(--s2);right:var(--s2);bottom:var(--s2);max-width:300px;margin:0;z-index:80;background:var(--bordo);color:var(--cream);border-radius:12px;padding:12px 14px;display:none;box-shadow:0 8px 20px rgba(42,20,23,.2)}
+@media (min-width:768px){.cookie{left:var(--s4);right:auto;bottom:var(--s4)}}
+.cookie.show{display:block}
+.cookie p{margin:0 0 10px;font-size:11px;line-height:1.5;letter-spacing:.04em;text-transform:none}
+.cookie .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.cookie button{height:32px;padding:0 var(--s3);border-radius:999px;border:1px solid var(--cream);background:var(--cream);color:var(--bordo);font-family:DecimaPro,sans-serif;font-size:12px;letter-spacing:.12em;cursor:pointer}
+.cookie a{font-size:10px;letter-spacing:.12em;color:var(--cream)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(243,234,219,.96);box-shadow:0 1px 0 rgba(122,26,36,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .brand{font-family:GalaBiline,serif;font-size:22px;letter-spacing:.02em;text-transform:none;text-decoration:none;color:var(--bordo);opacity:0;transition:opacity .4s ease;white-space:nowrap}
+.nav.past .brand{opacity:1}
+.feat{margin:var(--s5) 0 0}
+.feat img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px}
+.nav ul{display:flex;align-items:center;gap:var(--s3);list-style:none;margin:0;padding:0;font-size:11px;letter-spacing:.16em}
+.nav ul a{text-decoration:none;color:var(--bordo)}
+.nav ul{transition:opacity .4s ease}
+.nav:not(.past) ul,.nav:not(.past) .burger{opacity:0;pointer-events:none}
+.burger{transition:opacity .4s ease}
+.lang{display:flex;gap:var(--s1);font-size:10px;letter-spacing:.14em}
+.lang button{background:none;border:0;font:inherit;color:inherit;opacity:.55;cursor:pointer;padding:4px}
+.lang button[aria-pressed=true]{opacity:1;font-weight:700;text-decoration:underline}
+.scroll-hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;text-decoration:none;opacity:.8}
+.scroll-hint::after{content:"";width:1px;height:20px;background:currentColor}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--bordo)}
+.burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:5px auto}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--s7) var(--s3) var(--s6);background:linear-gradient(rgba(243,234,219,.78),rgba(243,234,219,.96)),url(assets/hero-landscape.jpg) center/cover no-repeat,var(--cream)}
+.hero .logo{width:min(240px,70vw);height:auto;margin:0 auto var(--s2)}
+.hero h1{font-size:clamp(28px,5.5vw,44px);margin:0 auto var(--s2);max-width:560px}
+.hero .sub{font-size:13px;margin:0 auto var(--s4);max-width:560px;line-height:1.4}
+.hero .sub strong{font-family:Metafora,serif;font-weight:700;font-size:18px;letter-spacing:.04em;line-height:1.2}
+.btns{display:flex;flex-direction:column;gap:var(--s2);align-items:center;width:100%}
+.btns .btn{width:min(300px,100%)}
+.sec{padding:var(--s5) 0}
+.sec.first{padding-top:var(--s5)}
+.split{display:grid;gap:var(--s5);align-items:center}
+.split .txt p{font-size:14px;line-height:1.9;margin:0 0 var(--s3);max-width:520px}
+.split img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.band{height:280px;background:url(assets/band.jpg) center 30%/cover fixed no-repeat}
+.menu-grid{display:grid;gap:var(--s4);margin-top:var(--s5)}
+.card{display:flex;flex-direction:column;gap:var(--s2)}
+.card .img{aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:rgba(122,26,36,.08);display:flex;align-items:center;justify-content:center}
+.card .img img{width:100%;height:100%;object-fit:cover}
+.card .img .ph{font-size:11px;letter-spacing:.14em;color:rgba(122,26,36,.6)}
+.card p{margin:0;font-size:12px;line-height:1.7;letter-spacing:.1em}
+.card a.cta{align-self:flex-start;font-size:11px;letter-spacing:.16em;text-decoration:none;border-bottom:1px solid var(--bordo);padding-bottom:2px;margin-top:var(--s1)}
+.mail{max-width:440px;margin:0 auto;display:flex;flex-direction:column;gap:var(--s2);text-align:center}
+.mailsec{padding-top:var(--s4)}
+@media (min-width:768px){.mail{max-width:820px}.mail .q{white-space:nowrap}}
+.mail .q{font-family:Metafora,serif;font-weight:700;font-size:15px;letter-spacing:.1em;line-height:1.5;margin:0 0 var(--s1)}
+.mail input[type=email]{width:100%;height:52px;padding:0 var(--s3);border:1px solid rgba(122,26,36,.35);border-radius:999px;background:#fff;color:var(--bordo);font:inherit;font-size:13px;letter-spacing:.08em;text-transform:none}
+.mail input[type=email]:focus{outline:2px solid var(--bordo);outline-offset:2px}
+.consent{display:flex;align-items:center;justify-content:center;gap:var(--s1);font-size:10px;letter-spacing:.1em;line-height:1.5}
+.consent input{margin:0;flex:0 0 auto;accent-color:var(--bordo)}
+.mail button{align-self:center;width:min(300px,100%);height:56px;margin-top:var(--s1);border-radius:999px;border:0;background:var(--bordo);color:var(--cream);font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+@media (min-width:768px){.mail button{min-width:240px;width:auto;padding:0 var(--s4)}}
+.contact{display:flex;flex-direction:column;align-items:center;gap:var(--s3);text-align:center}
+.addr{text-decoration:none;font-family:Metafora,serif;font-size:17px;letter-spacing:.06em;line-height:1.5}
+.addr small{display:block;margin-top:var(--s1);font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.14em}
+.tel{font-family:Metafora,serif;font-size:20px;letter-spacing:.06em;text-decoration:none}
+.legal-line{font-size:10px;letter-spacing:.12em;margin:calc(var(--s1)*-1) 0 0;opacity:.8}
+.icons{display:flex;gap:var(--s2);align-items:center;justify-content:center;flex-wrap:wrap}
+.ic{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(122,26,36,.25);text-decoration:none}
+.ic:hover{background:rgba(122,26,36,.08)}
+@media (min-width:768px){
+  .nav ul{display:flex}
+  .split{grid-template-columns:1fr 1fr;gap:var(--s6)}
+  .split.rev .txt{order:2}
+  .menu-grid{grid-template-columns:repeat(3,1fr)}
+  .band{height:420px}
+  .btns{flex-direction:row;justify-content:center}
+  .btns .btn{width:auto;min-width:240px}
+  .hero{padding:var(--s7) var(--s4) var(--s7)}
+  .wrap{padding:0 var(--s4)}
+}
+@media (max-width:767px){
+  .nav ul{display:none}
+  .nav.open ul{display:flex;flex-direction:column;position:fixed;inset:0;z-index:55;background:var(--cream);padding:112px var(--s3) 0;text-align:center}
+  .nav.open ul li{border-bottom:1px dotted rgba(122,26,36,.14)}
+  .nav.open ul a{display:block;padding:var(--s3) 0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:30px;letter-spacing:.04em;line-height:1.2}
+  .nav .brand,.nav .burger{position:relative;z-index:60}
+  .burger{display:block}
+  .btns{flex-direction:row;flex-wrap:nowrap;gap:var(--s1);width:100%}
+  .btns .btn{width:auto;flex:1 1 0;min-width:0;height:48px;padding:0 10px;font-size:11px;letter-spacing:.08em;white-space:nowrap}
+  .split img{aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){ .band{background-attachment:scroll} }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Tasquinha do Brasileiro</a>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#natal">Natal</a></li>
+      <li><a href="#catering">Catering</a></li>
+      <li><a href="#contactos">Contactos</a></li>
+    </ul>
+    <button type="button" class="burger" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+<a class="xmas-bar" href="#natal"><span class="tk"><span class="xc"><span>Disponibilidade limitada</span><span class="xn"><img class="xstar" src="assets/icon-estrela-dourada.svg" alt="" width="12" height="12"><strong>Eventos de Natal</strong><img class="xstar" src="assets/icon-estrela-dourada.svg" alt="" width="12" height="12"></span><span>Reserve já o seu lugar à mesa</span></span><span class="xc" aria-hidden="true"><span>Disponibilidade limitada</span><span class="xn"><img class="xstar" src="assets/icon-estrela-dourada.svg" alt="" width="12" height="12"><strong>Eventos de Natal</strong><img class="xstar" src="assets/icon-estrela-dourada.svg" alt="" width="12" height="12"></span><span>Reserve já o seu lugar à mesa</span></span></span></a>
+  <div class="wrap">
+    <img class="logo" src="assets/logo.svg" alt="Tasquinha do Brasileiro">
+    <p class="kicker" data-i18n="kicker">Desde 1965 · Viseu</p>
+    <p class="sub"><strong data-i18n="sub">Reservas, Take-Away, Menus e Mais novidades!</strong><br><span data-i18n="sub2">Tudo à distância de um toque.</span></p>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20reserva" target="_blank" rel="noopener" data-i18n="btnRes">Reservar pelo WhatsApp</a>
+      <button type="button" class="btn line" data-open="takeaway" data-i18n="btnTake">Encomendar take-away</button>
+    </div>
+  </div>
+  <a class="scroll-hint" href="#menu" data-i18n="scrollH">Deslize para ver mais</a>
+</section>
+
+
+
+<section class="sec first" id="menu">
+  <div class="wrap">
+    <p class="label" style="text-align:center" data-i18n="menuL">Para comer, petiscar e levar</p>
+    <h2 style="text-align:center" data-i18n="menuH">Menus</h2>
+    <div class="menu-grid">
+      <article class="card" data-open="refeicoes" tabindex="0" role="button">
+        <div class="img"><img src="assets/menu-refeicoes.jpg" alt="Refeições" loading="lazy"></div>
+        <h3 data-i18n="m1t">Refeições</h3>
+        <p data-i18n="m1p">Pratos tradicionais portugueses, feitos com a calma de sempre.</p>
+      </article>
+      <article class="card" data-open="bebidas" tabindex="0" role="button">
+        <div class="img"><img src="assets/menu-garrafeira.jpg" alt="Garrafeira" loading="lazy"></div>
+        <h3 data-i18n="m2t">Petiscos</h3>
+        <p data-i18n="m2p">Para partilhar, com um bom vinho ou uma cerveja.</p>
+      </article>
+      <article class="card" data-open="takeaway" tabindex="0" role="button">
+        <div class="img"><img src="assets/menu-takeaway.jpg" alt="Take-away" loading="lazy"></div>
+        <h3 data-i18n="m3t">Take-away</h3>
+        <p data-i18n="m3p">Leve a tasquinha para casa. Encomende pelo WhatsApp.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="sec natal" id="natal">
+  <div class="wrap">
+    <p class="label">Jantares de grupo</p>
+    <h2>Natal</h2>
+    <p class="ntext">Menus concebidos especialmente para a época natalícia, para jantares de família, empresa ou amigos.</p>
+    <div class="natal-grid">
+      <article class="ncard" data-open="natal-azevinho" tabindex="0" role="button">
+        <img class="nico" src="assets/icon-azevinho.svg" alt="">
+        <p class="nlab">Tradicional</p>
+        <h3>Azevinho</h3>
+        <p class="nprice">30 € <span>p/ pessoa</span></p>
+        <p class="ndesc">Os sabores de sempre da nossa cozinha, servidos com amor, como numa consoada à portuguesa.</p>
+      </article>
+      <article class="ncard gold" data-open="natal-estrela" tabindex="0" role="button">
+        <img class="nico" src="assets/icon-estrela.svg" alt="">
+        <p class="nlab">Premium</p>
+        <h3>Estrela</h3>
+        <p class="nprice">35 € <span>p/ pessoa</span></p>
+        <p class="ndesc">A escolha mais exclusiva da época, com sabores selecionados e pratos de eleição.</p>
+      </article>
+    </div>
+    <p class="ntext nnovo"><strong>Novidade:</strong> este ano pode oferecer a prenda de bem comer com o Voucher Tasquinha, <span class="nsm">disponível junto dos nossos colaboradores.</span></p>
+    <div class="modal-cta" style="text-align:center;margin-top:var(--s4)">
+      <a class="btn line" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar para o Natal</a>
+    </div>
+  </div>
+</section>
+<section class="sec" id="catering">
+  <div class="wrap cater">
+    <p class="label" data-i18n="catL">Eventos</p>
+    <h2 data-i18n="catH">Catering</h2>
+    <div class="cater-txt">
+      <p data-i18n="cat1">O catering da Tasquinha do Brasileiro nasceu da vontade de estar presente nos momentos especiais da vida.</p>
+      <p data-i18n="cat2">Preparamos cada proposta com atenção ao detalhe, num serviço cuidado e personalizado.</p>
+      <p data-i18n="cat3">Estamos presentes em casamentos, aniversários, batizados, jantares de empresa e outros eventos privados.</p>
+      <p data-i18n="cat4">Cada proposta é única, pensada para criar momentos memoráveis com o sabor da tasquinha.</p>
+    </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+  <p class="cater-note"><span data-i18n="catN1">Para mais informações ou para pedir orçamento,</span> <a href="https://wa.me/351928057856" target="_blank" rel="noopener" data-i18n="catLink">contacte-nos pelo WhatsApp</a>.</p>
+  </div>
+</section>
+
+
+</main>
+
+<div class="modal" id="takeaway" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="ta-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="ta-title" class="modal-h" data-i18n="taT">Take-Away</h2>
+    <div class="mcat">
+      <h3 data-i18n="sCarne">Carne</h3>
+      <ul>
+        <li><span>Alheira com ovo</span></li>
+        <li><span>Francesinha</span><small>Porco ou vitela / frango</small></li>
+        <li><span>Panados</span><small>Porco / frango</small></li>
+        <li><span>Iscas de fígado</span><small>Cebolada</small></li>
+        <li><span>Bife à tasquinha</span><small>+/– 200 g · ou à Mirandesa</small></li>
+        <li><span>Bifinhos com cogumelos</span></li>
+        <li><span>Nacos de vitela</span><small>Azeite e alho</small></li>
+        <li><span>Lombinho de porco</span><small>Grelhado ou c/ molho de cogumelos</small></li>
+        <li><span>Grelhada mista</span></li>
+        <li><span>Nacos de vitela</span><small>Molho de cogumelos</small></li>
+        <li><span>Picanha</span></li>
+        <li><span>Naco serrano</span><small>Queijo da região da serra</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3 data-i18n="sPeixe">Peixe</h3>
+      <ul>
+        <li><span>Sardinha petinga</span><small>Com arroz de feijão</small></li>
+        <li><span>Filetes de pescada</span><small>Com arroz de feijão</small></li>
+        <li><span>Bacalhau à tasquinha</span><small>Ou lagareiro</small></li>
+        <li><span>Polvo à tasquinha</span><small>Ou lagareiro</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3 data-i18n="sVeg">Vegetariano</h3>
+      <ul>
+        <li><span>Brás de cogumelos</span></li>
+        <li><span>Francesinha</span></li>
+        <li><span>Hambúrguer vegetariano</span><small>Arroz de feijão e legumes do dia</small></li>
+        <li><span>Ovos rotos de cogumelos</span></li>
+      </ul>
+    </div>
+    <p class="mnote" data-i18n="halfN">Há disponibilidade de apenas meia dose.</p>
+    <p class="mlegal">Take-away: acresce 0,50€ por cada caixa ao preço.<br>Acresce ainda 0,10€ por cada vasilhame elegível ao sistema Volta.<br>IVA incluído à taxa legal em vigor.</p>
+    <div class="modal-cta">
+      <a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20take-away" target="_blank" rel="noopener" data-i18n="taCta">Pedir já</a>
+    </div>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<div class="modal" id="refeicoes" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="refeicoes-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="refeicoes-title" class="modal-h" data-i18n="m1t">Refeições e Petiscos</h2>
+    <p class="modal-soon" data-i18n="soonT">Carta em breve.</p>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<div class="modal" id="bebidas" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="bebidas-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="bebidas-title" class="modal-h" data-i18n="m2t">Garrafeira</h2>
+    <div class="mcat">
+      <h3>Vinhos tintos</h3>
+      <h4 class="mreg">Dão</h4>
+      <ul>
+        <li><span>Morgado de Silgueiros</span></li>
+        <li><span>Catedral Reserva</span></li>
+        <li><span>Cabriz</span></li>
+        <li><span>Pedra Cancela</span></li>
+        <li><span>Ribeiro Santo</span></li>
+        <li><span>Passarella</span></li>
+        <li><span>PMA</span></li>
+        <li><span>Casa de Santar</span></li>
+        <li><span>Terras de Figueiral</span></li>
+        <li><span>Dão Penalva Jaen / Tinta Roriz</span></li>
+        <li><span>Adega de Penalva Reserva</span></li>
+        <li><span>Desalinhado</span></li>
+        <li><span>Quinta dos Três Maninhos</span></li>
+        <li><span>Centenariae Vineae</span></li>
+      </ul>
+      <h4 class="mreg">Douro</h4>
+      <ul>
+        <li><span>Montes Ermos</span></li>
+        <li><span>Papa Figos</span></li>
+      </ul>
+      <h4 class="mreg">Alentejo</h4>
+      <ul>
+        <li><span>Monte Velho</span></li>
+        <li><span>Trinca Bolotas</span></li>
+      </ul>
+      <h4 class="mreg">Setúbal</h4>
+      <ul>
+        <li><span>Piriquita</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Vinhos brancos</h3>
+      <h4 class="mreg">Dão</h4>
+      <ul>
+        <li><span>Cabriz</span></li>
+        <li><span>Pedra Cancela</span></li>
+        <li><span>Passarella</span></li>
+        <li><span>Casa de Santar</span></li>
+        <li><span>Dão Bical</span></li>
+        <li><span>Dão Encruzado</span></li>
+        <li><span>Q. dos Monteirinhos</span></li>
+      </ul>
+      <h4 class="mreg">Douro</h4>
+      <ul>
+        <li><span>Montes Ermos Reserva</span></li>
+        <li><span>Papa Figos</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Rosé, verdes e sangria</h3>
+      <h4 class="mreg">Rosé</h4>
+      <ul>
+        <li><span>Mateus</span></li>
+      </ul>
+      <h4 class="mreg">Verde</h4>
+      <ul>
+        <li><span>Casal Garcia</span></li>
+        <li><span>Muralhas</span></li>
+      </ul>
+      <h4 class="mreg">Sangria</h4>
+      <ul>
+        <li><span>Branca / tinta / frutos vermelhos</span><small>1 L · 1,75 L</small></li>
+        <li><span>Maracujá</span><small>1 L · 1,75 L</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Espumantes</h3>
+      <ul>
+        <li><span>Raposeira</span><small>Doce · meio seco · bruto</small></li>
+        <li><span>Terras de Demo</span><small>Doce · meio seco · bruto</small></li>
+        <li><span>Murganheira</span><small>Doce · meio seco · bruto</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Cervejas e bar</h3>
+      <h4 class="mreg">Cervejas</h4>
+      <ul>
+        <li><span>Sagres</span><small>À pressão</small></li>
+        <li><span>Bohemia</span><small>À pressão</small></li>
+        <li><span>Mini</span><small>20 cl</small></li>
+        <li><span>Super Bock</span><small>33 cl</small></li>
+        <li><span>Tango</span><small>20 cl</small></li>
+        <li><span>Martini com cerveja</span></li>
+        <li><span>Favaios com cerveja</span></li>
+      </ul>
+      <h4 class="mreg">Gin</h4>
+      <ul>
+        <li><span>Tanqueray</span><small>Raspa de limão ou uvas & louro</small></li>
+        <li><span>Gordon's</span><small>Raspa de limão & zimbro</small></li>
+      </ul>
+      <h4 class="mreg">Whisky</h4>
+      <ul>
+        <li><span>Cutty Sark</span></li>
+        <li><span>Ballantines</span></li>
+        <li><span>J.B. Novo</span></li>
+        <li><span>J.B. 15 anos</span></li>
+        <li><span>Jameson</span></li>
+        <li><span>Logan</span></li>
+        <li><span>Famous Grouse</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Aperitivos e digestivos</h3>
+      <ul>
+        <li><span>Amarelinha</span></li>
+        <li><span>Ginginha</span></li>
+        <li><span>Moscatel Favaios</span><small>Douro</small></li>
+        <li><span>Moscatel Alambre Roxo</span></li>
+        <li><span>Amêndoa amarga</span></li>
+        <li><span>Ponte de Marante</span></li>
+        <li><span>Vinho do Porto</span></li>
+        <li><span>Martini rosso / branco</span></li>
+        <li><span>1920</span></li>
+        <li><span>Constantino</span></li>
+        <li><span>Croft</span></li>
+        <li><span>Macieira</span></li>
+        <li><span>Macieira Cream</span></li>
+        <li><span>Licor Beirão</span></li>
+        <li><span>Rum</span></li>
+        <li><span>Aliança Velha</span></li>
+        <li><span>Ricard</span></li>
+        <li><span>Aguardente S. Domingos Bagaceira</span></li>
+        <li><span>Aguardente S. Domingos Velhíssima</span></li>
+        <li><span>CRF</span></li>
+        <li><span>Martha's</span></li>
+      </ul>
+    </div>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<div class="modal" id="natal-azevinho" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="natal-azevinho-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="natal-azevinho-title" class="modal-h">Menu Azevinho</h2>
+    <p class="mprice">30 € p/ pessoa</p>
+    <div class="mcat">
+      <h3>Entradas</h3>
+      <ul>
+        <li><span>Couvert</span><small>Pão, azeitonas & salgadinhos</small></li>
+        <li><span>Tábua tradicional</span><small>Queijos & presunto</small></li>
+        <li><span>Petiscos à tasquinha</span><small>Moelas & ovos rotos</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Pratos principais</h3>
+      <ul>
+        <li><span>Bacalhau à moda da Beira</span><small>Bacalhau desfiado com broa de milho & espinafres</small></li>
+        <li><span>Arroz de pato</span><small>À moda tradicional, no forno</small></li>
+        <li><span>Brás de cogumelos</span><small>Alternativa vegan ao prato principal</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Sobremesa</h3>
+      <ul>
+        <li><span>Mesa doce da Tasquinha</span><small>Sobremesas de Natal à escolha, feitas com amor</small></li>
+        <li><span>Café prendado</span><small>Acompanhado de um mimo de Natal</small></li>
+      </ul>
+    </div>
+    <p class="mnote">Inclui 2 bebidas por pessoa: vinho da casa, água, refrigerantes ou cerveja. Bebidas adicionais pagas à parte.</p>
+    <p class="mlegal">Disponíveis até 6 de janeiro de 2027.<br>IVA incluído à taxa legal em vigor.</p>
+    <div class="modal-cta"><a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar</a></div>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<div class="modal" id="natal-estrela" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="natal-estrela-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="natal-estrela-title" class="modal-h">Menu Estrela</h2>
+    <p class="mprice">35 € p/ pessoa</p>
+    <div class="mcat">
+      <h3>Entradas</h3>
+      <ul>
+        <li><span>Couvert</span><small>Pão, azeitonas & salgadinhos</small></li>
+        <li><span>Tábua real</span><small>Queijos, presunto & enchidos</small></li>
+        <li><span>Petiscos à tasquinha</span><small>Petinga, moelas, fígado, ovos rotos & cogumelos salteados</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Pratos principais</h3>
+      <ul>
+        <li><span>Posta alta da consoada</span><small>Posta de bacalhau com crosta de broa, batata a murro & grelos</small></li>
+        <li><span>Vitela à lafões</span><small>Assada no forno à moda da região</small></li>
+        <li><span>Brás de cogumelos</span><small>Alternativa vegan ao prato principal</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Sobremesa</h3>
+      <ul>
+        <li><span>Mesa doce da Tasquinha</span><small>Sobremesas de Natal à escolha, feitas com amor</small></li>
+        <li><span>Café prendado</span><small>Acompanhado de um mimo de Natal</small></li>
+      </ul>
+    </div>
+    <p class="mnote">Inclui 2 bebidas por pessoa: vinho da casa, água, refrigerantes ou cerveja. Bebidas adicionais pagas à parte.</p>
+    <p class="mlegal">Disponíveis até 6 de janeiro de 2027.<br>IVA incluído à taxa legal em vigor.</p>
+    <div class="modal-cta"><a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar</a></div>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<footer class="foot" id="contactos">
+  <div class="wrap foot-cols">
+    <div class="fc">
+      <h3 class="fh" data-i18n="locL">Localização</h3>
+      <div class="addrbox">
+      <a class="addr" href="https://maps.app.goo.gl/2quWfHFcNdZFHmW27" target="_blank" rel="noopener"><span data-i18n="addr">Rua Camilo Castelo Branco</span><br><span data-i18n="zip">3510-427 Viseu</span></a>
+      <small class="landmark" data-i18n="landmark">Em frente à Loja do Cidadão</small>
+    </div>
+    </div>
+    <div class="fc">
+      <h3 class="fh" data-i18n="hoursL">Horário</h3>
+      <div class="hbox">
+        <p class="hrs">Segunda-feira <strong>09:00–20:00</strong></p>
+        <p class="hrs">Terça-feira <strong>09:00–15:30</strong></p>
+        <p class="hrs">Quarta-feira <strong>09:00–20:00</strong></p>
+        <p class="hrs">Quinta-feira <strong>09:00–20:00</strong></p>
+        <p class="hrs">Sexta-feira <strong>09:00–23:00</strong></p>
+        <p class="hrs">Sábado <strong>09:00–22:00</strong></p>
+        <p class="hrs">Domingo <strong>Fechado</strong></p>
+      </div>
+    </div>
+    <div class="fc">
+      <h3 class="fh" data-i18n="conL">Contactos</h3>
+      <div class="telbox">
+        <a class="tel" href="tel:+351928057856">+351 928 057 856</a>
+        <p class="legal-line" data-i18n="legal">Chamada para rede móvel nacional</p>
+      </div>
+      <div class="icons fic">
+  <a class="ic" href="https://www.facebook.com/TasquinhadoBrasileiro" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22z"/></svg></a>
+  <a class="ic" href="https://www.instagram.com/tasquinhadobrasileiro/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+  <a class="ic" href="https://wa.me/351928057856" target="_blank" rel="noopener" aria-label="WhatsApp +351 928 057 856"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+  <a class="ic" href="https://www.tripadvisor.pt/Restaurant_Review-g189149-d17323219-Reviews-Tasquinha_do_Brasileiro-Viseu_Viseu_District_Northern_Portugal.html" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg viewBox="0 0 24 24" width="26" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6.5" cy="14" r="4"/><circle cx="17.5" cy="14" r="4"/><circle cx="6.5" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="17.5" cy="14" r="1.4" fill="currentColor" stroke="none"/><path d="M2 9.5c2-2.5 6-3 10-3s8 .5 10 3"/></svg></a>
+</div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <img class="foot-logo" src="assets/logo-light.svg" alt="Tasquinha do Brasileiro">
+    <p class="foot-info">© 2026 Tasquinha do Brasileiro<br>Viseu, Portugal</p>
+    <nav class="legal-links" aria-label="Legal">
+  <a href="politica-privacidade.html" data-i18n="legalPriv">Política de Privacidade</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="politica-cookies.html" data-i18n="legalCook">Política de Cookies</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="termos-condicoes.html" data-i18n="legalTerms">Termos e Condições</a>
+  <span class="sep" aria-hidden="true">·</span>
+  <a href="livro-reclamacoes.html" data-i18n="legalComp">Livro de Reclamações</a>
+</nav>
+  </div>
+</footer>
+
+<div class="cookie" role="region" aria-label="Cookies">
+  <p data-i18n="cookieT">Este site usa apenas cookies técnicos e essenciais. Não usa cookies de publicidade nem de análise.</p>
+  <div class="row"><button type="button" data-i18n="cookieOk">Entendi</button><a href="politica-cookies.html" data-i18n="cookieLink">Política de Cookies</a></div>
+</div>
+<script>
+(function(){
+  const nav=document.querySelector('.nav');
+  const hero=document.getElementById('inicio');
+  const onScroll=()=>{ if(!nav) return; const on=!hero || window.scrollY > hero.offsetHeight - 72; nav.classList.toggle('scrolled', on); nav.classList.toggle('past', on); const xb=document.querySelector('.xmas-bar'); nav.style.top=Math.max(0,(xb?xb.offsetHeight:0)-window.scrollY)+'px'; };
+  window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); onScroll();
+  const burger=document.querySelector('.burger');
+  if(burger) burger.addEventListener('click',()=>{ nav.classList.toggle('open'); burger.setAttribute('aria-expanded', nav.classList.contains('open')); });
+  document.querySelectorAll('.nav ul a').forEach(a=>a.addEventListener('click',()=>{ nav.classList.remove('open'); if(burger) burger.setAttribute('aria-expanded','false'); }));
+  const KEY='tb-cookie-ok';
+  let seen=false; try{ seen=!!localStorage.getItem(KEY); }catch(e){}
+  const bar=document.querySelector('.cookie');
+  if(bar && !seen) bar.classList.add('show');
+  const ok=document.querySelector('.cookie button');
+  if(ok) ok.addEventListener('click',()=>{ try{ localStorage.setItem(KEY,'1'); }catch(e){} bar.classList.remove('show'); });
+})();
+const FORCE_LANG='pt';
+
+const I18N = {
+ pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Preparada ao jeito do brasileiro",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições e Petiscos",m1p:"Pratos e petiscos para comer em qualquer hora.",m2t:"Garrafeira",m2p:"Uma garrafeira selecionada para acompanhar os melhores momentos.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
+ en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Dishes and petiscos to eat at any time of day.",m2t:"Drinks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
+ es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Bebidas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
+ fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Boissons",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
+};
+
+(function(){
+  let code='pt';
+  try{
+    const list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'pt'];
+    const found=list.map(l=>String(l).slice(0,2).toLowerCase()).find(l=>I18N[l]);
+    if(found) code=found;
+  }catch(e){}
+  if(FORCE_LANG) code=FORCE_LANG;
+  function apply(c){
+    const t=I18N[c];
+    document.documentElement.lang=c;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(t[k]!==undefined) el.textContent=t[k]; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder=t[el.dataset.i18nPh]; });
+    document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.lang===c));
+    document.querySelectorAll('[data-img-soon]').forEach(el=>{ el.textContent=t.photoSoon; });
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>apply(b.dataset.lang)));
+  apply(code);
+  const form=document.getElementById('mail');
+  if(form) form.addEventListener('submit',e=>e.preventDefault());
+})();
+
+(function(){
+  document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>{
+    const m=document.getElementById(b.dataset.open); if(!m) return;
+    m.hidden=false; const x=m.querySelector('.modal-x'); if(x) x.focus(); const bd=m.querySelector('.mbody'); if(bd) bd.scrollTop=0; syncRail(m);
+  }));
+  const syncRail=(m)=>{
+    const b=m.querySelector('.mbody'), r=m.querySelector('.mrail'), t=m.querySelector('.mthumb');
+    if(!b||!r||!t) return;
+    const ratio=b.clientHeight/b.scrollHeight;
+    if(ratio>=1){ r.style.display='none'; return; }
+    r.style.display='';
+    const th=Math.max(r.clientHeight*ratio,36);
+    t.style.height=th+'px';
+    const max=r.clientHeight-th;
+    const p=b.scrollTop/(b.scrollHeight-b.clientHeight);
+    t.style.top=(p*max)+'px';
+  };
+  document.querySelectorAll('.modal').forEach(m=>{
+    m.addEventListener('click',e=>{ if(e.target===m || e.target.closest('[data-close]')) m.hidden=true; });
+    const b=m.querySelector('.mbody');
+    if(b) b.addEventListener('scroll',()=>syncRail(m),{passive:true});
+  });
+  window.addEventListener('resize',()=>document.querySelectorAll('.modal:not([hidden])').forEach(syncRail));
+  document.querySelectorAll('[data-open]').forEach(el=>el.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); el.click(); } }));
+  const mq=document.querySelector('.marquee');
+  if(mq && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)){
+    const tr=mq.querySelector('.track'); let x=0, v=0.7, target=0.7;
+    mq.addEventListener('mouseenter',()=>{ target=0.12; });
+    mq.addEventListener('mouseleave',()=>{ target=0.7; });
+    const step=()=>{
+      const setW=tr.scrollWidth/3;
+      v+=(target-v)*0.04;
+      x-=v; if(-x>=setW) x+=setW;
+      tr.style.transform='translate3d('+x+'px,0,0)';
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.querySelectorAll('.modal').forEach(m=>m.hidden=true); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tasquin5/public_html/preview/
+    - /bin/cp -R index.html politica-privacidade.html politica-cookies.html termos-condicoes.html livro-reclamacoes.html assets $DEPLOYPATH
