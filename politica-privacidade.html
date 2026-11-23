@@ -3,15 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
 <title>Política de Privacidade · Tasquinha do Brasileiro</title>
 <meta name="description" content="Política de Privacidade da Tasquinha do Brasileiro.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tasquinha do Brasileiro">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Política de Privacidade · Tasquinha do Brasileiro">
+<meta property="og:description" content="Política de Privacidade da Tasquinha do Brasileiro.">
+<meta property="og:image" content="https://tasquinhadobrasileiro.pt/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-<style>
-@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.ttf) format("truetype");font-weight:700;font-display:swap}
-@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.ttf) format("truetype");font-weight:400;font-display:swap}
-@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.otf) format("opentype");font-weight:400;font-display:swap}
-@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.ttf) format("truetype");font-weight:300;font-style:oblique;font-display:swap}
+<style>:root{color-scheme:light only}
+
+@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.woff) format("woff");font-weight:300;font-style:oblique;font-display:swap}
 :root{--bordo:#7A1A24;--cream:#F3EADB;--ink:#2a1417;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:72px;--s7:112px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,8 +40,11 @@ h2{font-size:clamp(24px,4vw,34px)}
 h3{font-size:18px;letter-spacing:.1em}
 .kicker{font-size:11px;letter-spacing:.2em;margin:0 0 var(--s2)}
 .label{font-size:13px;letter-spacing:.22em;margin:0 0 var(--s2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:0;cursor:pointer;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:1px solid var(--bordo);cursor:pointer;background:var(--bordo);color:var(--cream);transition:background-color .2s ease,color .2s ease;text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
 .btn.line{background:transparent;color:var(--bordo);border:1px solid var(--bordo)}
+.btn:hover,.btn:active{background:var(--cream);color:var(--bordo)}
+.btn.line:hover,.btn.line:active{background:var(--bordo);color:var(--cream)}
+.btns .btn:not(.line):hover,.btns .btn:not(.line):active{background:transparent;color:var(--bordo)}
 .legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2) var(--s3);font-size:10px;letter-spacing:.14em}
 .legal-links a{text-decoration:none;border-bottom:1px solid rgba(122,26,36,.3)}
 .foot{background:var(--bordo);color:var(--cream);padding:var(--s6) var(--s3) var(--s5);text-align:center;text-transform:none;letter-spacing:.03em;font-family:MetaforaLight,serif;font-size:13px;line-height:1.7}
@@ -77,6 +94,7 @@ h3{font-size:18px;letter-spacing:.1em}
 .natal .label{color:#D4A94F}
 .natal .ntext{color:var(--cream)}
 .natal .btn.line{color:var(--cream);border-color:var(--cream)}
+.natal .btn.line:hover,.natal .btn.line:active{background:var(--cream);color:var(--bordo);border-color:var(--cream)}
 .ncard{color:var(--cream);border-color:rgba(243,234,219,.35)}
 .ncard:hover,.ncard:focus-visible{background:rgba(243,234,219,.08)}
 .ncard .nico{display:block;margin:0 auto var(--s1);width:56px;height:auto}
@@ -97,6 +115,7 @@ h3{font-size:18px;letter-spacing:.1em}
 .xmas-bar:hover{background:#6a1420}
 @media (max-width:767px){.xmas-bar{justify-content:flex-start;font-size:11px;letter-spacing:.1em;padding:0}.xmas-bar .xc[aria-hidden]{display:inline-flex}.xmas-bar .tk{animation:xtick 14s linear infinite}}
 @keyframes xtick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (min-width:768px){.xmas-bar .tk{display:flex;width:100%}.xmas-bar .xc:not([aria-hidden]){display:grid;grid-template-columns:1fr auto 1fr;align-items:center;width:100%;flex:1 1 auto;padding-right:0;gap:0}.xmas-bar .xc:not([aria-hidden])>span:first-child{justify-self:end;margin-right:14px}.xmas-bar .xc:not([aria-hidden])>span:last-child{justify-self:start;margin-left:14px}.xmas-bar .xc:not([aria-hidden]) .xn{justify-self:center}}
 .mlegal{font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.06em;line-height:1.6;opacity:.85;margin:var(--s3) 0 0;text-align:left}
 .modal-cta{text-align:center;margin-top:var(--s3)}
 .modal-soon{text-align:center;font-family:MetaforaLight,serif;font-size:15px;margin:0 0 var(--s2)}
@@ -124,8 +143,15 @@ h3{font-size:18px;letter-spacing:.1em}
 .foot .landmark{font-size:11px;opacity:.75;letter-spacing:.02em;text-transform:none;margin:3px 0 0;line-height:1.4}
 .foot .tel{font-family:Metafora,serif;font-size:16px;letter-spacing:.04em;text-decoration:none;text-transform:none;line-height:1.6}
 .foot .legal-line{font-size:11px;opacity:.75;margin:-2px 0 0;letter-spacing:.02em;text-transform:none}
-.foot .fic{justify-content:flex-start;margin:var(--s2) 0 0;gap:var(--s3);color:var(--cream)}
-.foot .fic .ic{width:auto;height:auto;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease}
+.foot .fic{display:grid;grid-template-columns:repeat(3,24px);justify-content:start;gap:18px;margin:var(--s2) 0 0;color:var(--cream)}
+.foot .fic .ic{width:24px;height:24px;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease;display:inline-flex;align-items:center;justify-content:center;overflow:visible}
+.foot .fic .ic>img.tc-b{display:none}
+.foot .fic .ic:hover>img.tc-a{display:none}
+.foot .fic .ic:hover>img.tc-b{display:block}
+.foot .fic .ic>svg{width:28px;height:28px}
+.foot .fic .ic>img{height:24px;width:auto;display:block}
+.foot .fic .ic>svg.fb-glyph{width:31px;height:31px}
+.foot .fic .ic>*{flex:0 0 auto}
 .foot .fic .ic:hover{background:none;color:var(--gold)}
 .foot-bottom{text-align:center}
 @media (min-width:768px){.foot-cols{grid-template-columns:repeat(3,1fr);gap:var(--s5)}}
@@ -272,10 +298,10 @@ h3{font-size:18px;letter-spacing:.1em}
 })();
 
 const I18N = {
- pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Preparada ao jeito do brasileiro",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições e Petiscos",m1p:"Pratos e petiscos para comer em qualquer hora.",m2t:"Garrafeira",m2p:"Uma garrafeira selecionada para acompanhar os melhores momentos.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
- en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Dishes and petiscos to eat at any time of day.",m2t:"Drinks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
- es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Bebidas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
- fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Boissons",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
+ pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Servida com alma de tasquinha",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições",m1p:"Pratos tradicionais portugueses, feitos com a calma de sempre.",m2t:"Petiscos",m2p:"Pequenos prazeres disponíveis a qualquer hora.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
+ en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Traditional Portuguese dishes, made with the usual care.",m2t:"Snacks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
+ es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Tapas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
+ fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Petiscos",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
 };
 (function(){
   let code='pt';

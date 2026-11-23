@@ -3,15 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tasquinha do Brasileiro</title>
-<meta name="description" content="Tasquinha do Brasileiro, Viseu. Cozinha portuguesa tradicional desde 1965. Reservas e take-away pelo WhatsApp.">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>Tasquinha do Brasileiro - Comida Tradicional Portuguesa | Viseu</title>
+<meta name="description" content="Tasquinha do Brasileiro, Viseu: cozinha tradicional portuguesa desde 1965. Jantares de grupo e empresas em ambiente familiar e catering para qualquer ocasião.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tasquinha do Brasileiro">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Tasquinha do Brasileiro - Comida Tradicional Portuguesa | Viseu">
+<meta property="og:description" content="Tasquinha do Brasileiro, Viseu: cozinha tradicional portuguesa desde 1965. Jantares de grupo e empresas em ambiente familiar e catering para qualquer ocasião.">
+<meta property="og:image" content="https://tasquinhadobrasileiro.pt/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-<style>
-@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.ttf) format("truetype");font-weight:700;font-display:swap}
-@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.ttf) format("truetype");font-weight:400;font-display:swap}
-@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.otf) format("opentype");font-weight:400;font-display:swap}
-@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.ttf) format("truetype");font-weight:300;font-style:oblique;font-display:swap}
+<style>:root{color-scheme:light only}
+
+@font-face{font-family:Metafora;src:url(assets/77b4da5acffe1872cff41e7902af8953.woff) format("woff");font-weight:700;font-display:swap}
+@font-face{font-family:DecimaPro;src:url(assets/DecimaPro.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:GalaBiline;src:url(assets/GalaBiline.woff) format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:MetaforaLight;src:url(assets/95943d442cba0ebe45be751030f978e5.woff) format("woff");font-weight:300;font-style:oblique;font-display:swap}
 :root{--bordo:#7A1A24;--cream:#F3EADB;--ink:#2a1417;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:72px;--s7:112px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,8 +40,11 @@ h2{font-size:clamp(24px,4vw,34px)}
 h3{font-size:18px;letter-spacing:.1em}
 .kicker{font-size:11px;letter-spacing:.2em;margin:0 0 var(--s2)}
 .label{font-size:13px;letter-spacing:.22em;margin:0 0 var(--s2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:0;cursor:pointer;background:var(--bordo);color:var(--cream);text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 var(--s4);border-radius:999px;border:1px solid var(--bordo);cursor:pointer;background:var(--bordo);color:var(--cream);transition:background-color .2s ease,color .2s ease;text-decoration:none;font-family:DecimaPro,sans-serif;font-size:14px;letter-spacing:.14em;text-align:center;text-transform:uppercase}
 .btn.line{background:transparent;color:var(--bordo);border:1px solid var(--bordo)}
+.btn:hover,.btn:active{background:var(--cream);color:var(--bordo)}
+.btn.line:hover,.btn.line:active{background:var(--bordo);color:var(--cream)}
+.btns .btn:not(.line):hover,.btns .btn:not(.line):active{background:transparent;color:var(--bordo)}
 .legal-links{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s2) var(--s3);font-size:10px;letter-spacing:.14em}
 .legal-links a{text-decoration:none;border-bottom:1px solid rgba(122,26,36,.3)}
 .foot{background:var(--bordo);color:var(--cream);padding:var(--s6) var(--s3) var(--s5);text-align:center;text-transform:none;letter-spacing:.03em;font-family:MetaforaLight,serif;font-size:13px;line-height:1.7}
@@ -77,6 +94,7 @@ h3{font-size:18px;letter-spacing:.1em}
 .natal .label{color:#D4A94F}
 .natal .ntext{color:var(--cream)}
 .natal .btn.line{color:var(--cream);border-color:var(--cream)}
+.natal .btn.line:hover,.natal .btn.line:active{background:var(--cream);color:var(--bordo);border-color:var(--cream)}
 .ncard{color:var(--cream);border-color:rgba(243,234,219,.35)}
 .ncard:hover,.ncard:focus-visible{background:rgba(243,234,219,.08)}
 .ncard .nico{display:block;margin:0 auto var(--s1);width:56px;height:auto}
@@ -97,6 +115,7 @@ h3{font-size:18px;letter-spacing:.1em}
 .xmas-bar:hover{background:#6a1420}
 @media (max-width:767px){.xmas-bar{justify-content:flex-start;font-size:11px;letter-spacing:.1em;padding:0}.xmas-bar .xc[aria-hidden]{display:inline-flex}.xmas-bar .tk{animation:xtick 14s linear infinite}}
 @keyframes xtick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (min-width:768px){.xmas-bar .tk{display:flex;width:100%}.xmas-bar .xc:not([aria-hidden]){display:grid;grid-template-columns:1fr auto 1fr;align-items:center;width:100%;flex:1 1 auto;padding-right:0;gap:0}.xmas-bar .xc:not([aria-hidden])>span:first-child{justify-self:end;margin-right:14px}.xmas-bar .xc:not([aria-hidden])>span:last-child{justify-self:start;margin-left:14px}.xmas-bar .xc:not([aria-hidden]) .xn{justify-self:center}}
 .mlegal{font-family:MetaforaLight,serif;font-size:11px;letter-spacing:.06em;line-height:1.6;opacity:.85;margin:var(--s3) 0 0;text-align:left}
 .modal-cta{text-align:center;margin-top:var(--s3)}
 .modal-soon{text-align:center;font-family:MetaforaLight,serif;font-size:15px;margin:0 0 var(--s2)}
@@ -124,8 +143,15 @@ h3{font-size:18px;letter-spacing:.1em}
 .foot .landmark{font-size:11px;opacity:.75;letter-spacing:.02em;text-transform:none;margin:3px 0 0;line-height:1.4}
 .foot .tel{font-family:Metafora,serif;font-size:16px;letter-spacing:.04em;text-decoration:none;text-transform:none;line-height:1.6}
 .foot .legal-line{font-size:11px;opacity:.75;margin:-2px 0 0;letter-spacing:.02em;text-transform:none}
-.foot .fic{justify-content:flex-start;margin:var(--s2) 0 0;gap:var(--s3);color:var(--cream)}
-.foot .fic .ic{width:auto;height:auto;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease}
+.foot .fic{display:grid;grid-template-columns:repeat(3,24px);justify-content:start;gap:18px;margin:var(--s2) 0 0;color:var(--cream)}
+.foot .fic .ic{width:24px;height:24px;border:0;padding:0;border-radius:0;color:inherit;transition:color .2s ease;display:inline-flex;align-items:center;justify-content:center;overflow:visible}
+.foot .fic .ic>img.tc-b{display:none}
+.foot .fic .ic:hover>img.tc-a{display:none}
+.foot .fic .ic:hover>img.tc-b{display:block}
+.foot .fic .ic>svg{width:28px;height:28px}
+.foot .fic .ic>img{height:24px;width:auto;display:block}
+.foot .fic .ic>svg.fb-glyph{width:31px;height:31px}
+.foot .fic .ic>*{flex:0 0 auto}
 .foot .fic .ic:hover{background:none;color:var(--gold)}
 .foot-bottom{text-align:center}
 @media (min-width:768px){.foot-cols{grid-template-columns:repeat(3,1fr);gap:var(--s5)}}
@@ -151,29 +177,82 @@ h3{font-size:18px;letter-spacing:.1em}
 .feat{margin:var(--s5) 0 0}
 .feat img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:14px}
 .nav ul{display:flex;align-items:center;gap:var(--s3);list-style:none;margin:0;padding:0;font-size:11px;letter-spacing:.16em}
-.nav ul a{text-decoration:none;color:var(--bordo)}
+.nav ul a{text-decoration:none;color:var(--bordo);transition:color .2s ease}
+.nav ul a:hover,.nav ul a:focus-visible{color:#9B6B1C}
+.nav-foot{display:none}
 .nav ul{transition:opacity .4s ease}
 .nav:not(.past) ul,.nav:not(.past) .burger{opacity:0;pointer-events:none}
 .burger{transition:opacity .4s ease}
 .lang{display:flex;gap:var(--s1);font-size:10px;letter-spacing:.14em}
 .lang button{background:none;border:0;font:inherit;color:inherit;opacity:.55;cursor:pointer;padding:4px}
 .lang button[aria-pressed=true]{opacity:1;font-weight:700;text-decoration:underline}
-.scroll-hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;text-decoration:none;opacity:.8}
+.scroll-hint{position:absolute;left:50%;bottom:24px;bottom:calc(24px + 100lvh - 100svh);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;text-decoration:none;opacity:.8}
 .scroll-hint::after{content:"";width:1px;height:20px;background:currentColor}
 .burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--bordo)}
 .burger span{display:block;width:22px;height:1.5px;background:currentColor;margin:5px auto}
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--s7) var(--s3) var(--s6);background:linear-gradient(rgba(243,234,219,.78),rgba(243,234,219,.96)),url(assets/hero-landscape.jpg) center/cover no-repeat,var(--cream)}
+.hero{position:relative;min-height:100vh;min-height:100lvh;display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--s7) var(--s3) var(--s6);background:linear-gradient(rgba(243,234,219,.78),rgba(243,234,219,.96)),url(assets/hero-landscape.webp) center/cover no-repeat,var(--cream)}
 .hero .logo{width:min(240px,70vw);height:auto;margin:0 auto var(--s2)}
 .hero h1{font-size:clamp(28px,5.5vw,44px);margin:0 auto var(--s2);max-width:560px}
 .hero .sub{font-size:13px;margin:0 auto var(--s4);max-width:560px;line-height:1.4}
 .hero .sub strong{font-family:Metafora,serif;font-weight:700;font-size:18px;letter-spacing:.04em;line-height:1.2}
 .btns{display:flex;flex-direction:column;gap:var(--s2);align-items:center;width:100%}
+.tc-link{display:block;width:92px;margin:var(--s4) auto 0}
+.tc-badge{display:block;width:92px;height:auto}
 .btns .btn{width:min(300px,100%)}
 .sec{padding:var(--s5) 0}
 .sec.first{padding-top:var(--s5)}
 .split{display:grid;gap:var(--s5);align-items:center}
 .split .txt p{font-size:14px;line-height:1.9;margin:0 0 var(--s3);max-width:520px}
 .split img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.hist{text-align:center}
+.hist-txt{max-width:640px;margin:var(--s4) auto 0}
+.hist-txt p{font-family:MetaforaLight,serif;font-size:15px;line-height:1.6;letter-spacing:.04em;margin:0 0 var(--s3);text-align:left}
+.hist-quote{font-family:Metafora,serif;font-weight:700;font-size:18px!important;line-height:1.4!important;text-align:center!important;margin:var(--s4) 0!important;color:var(--bordo)}
+.slides{position:relative;max-width:820px;margin:var(--s5) auto 0;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e6d9c4}
+.slides figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s ease}
+.slides figure.on{opacity:1}
+.slides img{width:100%;height:100%;object-fit:cover;display:block}
+.slides figcaption{position:absolute;left:0;right:0;top:0;padding:12px 16px;z-index:1;color:var(--cream);background:linear-gradient(rgba(42,20,23,.6),rgba(42,20,23,0));font-family:Metafora,serif;font-weight:700;font-size:15px;letter-spacing:.04em;text-align:left}
+.sl-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:var(--cream);font-size:34px;cursor:pointer;z-index:2;line-height:1;text-shadow:0 1px 8px rgba(0,0,0,.55)}
+.sl-prev{left:12px}.sl-next{right:12px}
+.sl-dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px;z-index:2}
+.sl-dots button{width:9px;height:9px;border-radius:50%;border:0;padding:0;background:rgba(243,234,219,.7);cursor:pointer}
+.sl-dots button.on{background:var(--cream)}
+.faq{max-width:720px;margin:0 auto}
+.faq details{border-bottom:1px solid rgba(122,26,36,.18);padding:var(--s2) 0}
+.faq summary{cursor:pointer;font-family:Metafora,serif;font-weight:700;font-size:16px;letter-spacing:.04em;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{font-family:MetaforaLight,serif;font-size:15px;line-height:1.6;letter-spacing:.04em;margin:var(--s2) 0 0;text-transform:none}
+.card[data-open] .img{position:relative}
+.card[data-open] .img::after{content:"Clique para ver mais";position:absolute;left:0;right:0;bottom:0;padding:44px 14px 12px;background:linear-gradient(to top,rgba(42,20,23,.88) 0%,rgba(42,20,23,.45) 55%,rgba(42,20,23,0) 100%);color:var(--cream);font-family:Metafora,serif;font-weight:700;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-align:center;pointer-events:none}
+@media (min-width:768px){.card[data-open] .img::after{display:none}}
+.ncard[data-open]::after{content:"Clique para ver mais";display:block;margin-top:var(--s3);padding-top:12px;border-top:1px solid currentColor;opacity:.85;font-family:Metafora,serif;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+@media (min-width:768px){.ncard[data-open]::after{display:none}}
+.kidsp{font-family:MetaforaLight,serif;font-size:15px;line-height:1.7;letter-spacing:.04em;text-transform:none;margin:0 0 var(--s2);text-align:left}
+.voucher-img{display:block;width:min(220px,62%);height:auto;margin:var(--s3) auto 0;border-radius:10px;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.wa-fab{position:fixed;right:18px;bottom:18px;z-index:80;width:56px;height:56px;border-radius:50%;border:0;padding:0;background:var(--bordo);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(42,20,23,.35)}
+.wa-fab svg{width:28px;height:28px;fill:var(--cream)}
+.wa-fab[hidden]{display:none}
+.wa-menu{position:fixed;right:18px;bottom:84px;z-index:80;background:var(--cream);border:1px solid rgba(122,26,36,.2);border-radius:14px;padding:var(--s2);width:min(270px,calc(100vw - 36px));box-shadow:0 10px 30px rgba(42,20,23,.25)}
+.wa-menu[hidden]{display:none}
+.wa-menu p{margin:0 0 var(--s1);font-family:Metafora,serif;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--bordo)}
+.wa-menu a{display:block;padding:10px 12px;margin-top:6px;border-radius:10px;background:rgba(122,26,36,.07);color:var(--bordo);text-decoration:none;font-family:MetaforaLight,serif;font-size:14px;letter-spacing:.03em;line-height:1.35}
+.wa-menu a:hover,.wa-menu a:focus-visible{background:rgba(122,26,36,.16);outline:none}
+.wa-free{display:flex;gap:6px;margin-top:6px}
+.wa-free input{flex:1;min-width:0;border:1px solid rgba(122,26,36,.2);background:#fffaf0;border-radius:10px;padding:10px 12px;font-family:MetaforaLight,serif;font-size:16px;color:var(--ink);outline:none}
+.wa-free input::placeholder{color:rgba(122,26,36,.35)}
+.wa-free input:focus{border-color:var(--bordo)}
+.wa-free button{width:42px;border:0;border-radius:10px;background:var(--bordo);color:var(--cream);font-size:16px;cursor:pointer}
+@media (max-width:767px){.wa-fab{bottom:70px;right:14px}.wa-menu{bottom:134px;right:14px}}
+.vt{position:relative;text-decoration:underline;text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:4px;cursor:pointer;display:inline-block}
+.vt-pop{position:absolute;left:50%;bottom:calc(100% + 12px);width:200px;max-width:70vw;transform:translate(-50%,10px) scale(.96);opacity:0;pointer-events:none;transition:opacity .35s ease,transform .35s ease;z-index:20;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.vt-pop img{display:block;width:100%;height:auto;border-radius:14px;transform-origin:center;transition:transform .12s linear}
+.vt.open .vt-pop{opacity:1;transform:translate(-50%,0) scale(1)}
+@media (hover:hover) and (pointer:fine){.vt:hover .vt-pop,.vt:focus-visible .vt-pop{opacity:1;transform:translate(-50%,0) scale(1)}}
+.vt:focus-visible{outline:none}
+.foot{box-shadow:0 100vh 0 var(--bordo)}
 .band{height:280px;background:url(assets/band.jpg) center 30%/cover fixed no-repeat}
 .menu-grid{display:grid;gap:var(--s4);margin-top:var(--s5)}
 .card{display:flex;flex-direction:column;gap:var(--s2)}
@@ -213,9 +292,21 @@ h3{font-size:18px;letter-spacing:.1em}
 }
 @media (max-width:767px){
   .nav ul{display:none}
-  .nav.open ul{display:flex;flex-direction:column;position:fixed;inset:0;z-index:55;background:var(--cream);padding:112px var(--s3) 0;text-align:center}
+  .nav.open ul{display:flex;flex-direction:column;position:fixed;inset:0;z-index:55;background:var(--cream);padding:112px var(--s3) 0;text-align:center;touch-action:none;overscroll-behavior:none}
+  html:has(.nav.open),body:has(.nav.open){overflow:hidden;overscroll-behavior:none}
   .nav.open ul li{border-bottom:1px dotted rgba(122,26,36,.14)}
-  .nav.open ul a{display:block;padding:var(--s3) 0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:30px;letter-spacing:.04em;line-height:1.2}
+  .nav.open ul a{display:block;padding:3px 0;font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:22px;letter-spacing:.04em;line-height:1.2}
+  .nav.open .nav-foot{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:100;flex-direction:column;align-items:center;gap:0;padding:12px var(--s3) 22px;background:var(--cream);border-top:1px solid rgba(122,26,36,.14)}
+  .nav.open .nav-foot .icons{display:flex;gap:20px;justify-content:center}
+  .nav.open .nav-foot .ic{width:auto;height:auto;border:0;border-radius:0}
+  .nav.open .nav-foot .ic>svg{width:22px;height:22px}
+  .nav.open .nav-foot .ic>img{height:24px;width:auto;display:block}
+  .nav.open .nav-foot .tel-note{font-size:11px;letter-spacing:.04em;color:var(--bordo);opacity:.8;margin:-4px 0 14px}
+  .ic{width:72px;height:48px;border-radius:24px}
+.ic > svg{width:28px;height:28px}
+.ic > img{height:28px;width:auto;display:block}
+body:has(.nav.open) .cookie{display:none}
+.nav-tel{font-family:MetaforaLight,serif;font-size:15px;letter-spacing:.06em;color:var(--bordo);text-decoration:none}
   .nav .brand,.nav .burger{position:relative;z-index:60}
   .burger{display:block}
   .btns{flex-direction:row;flex-wrap:nowrap;gap:var(--s1);width:100%}
@@ -231,11 +322,18 @@ h3{font-size:18px;letter-spacing:.1em}
   <div class="wrap">
     <a class="brand" href="#inicio">Tasquinha do Brasileiro</a>
     <ul>
+      <li><a href="#historia">História</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#natal">Natal</a></li>
       <li><a href="#catering">Catering</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contactos">Contactos</a></li>
     </ul>
+    <div class="nav-foot"><a class="nav-tel" href="tel:+351928057856">+351 928 057 856</a><small class="tel-note">Chamada para rede móvel nacional</small><div class="icons">
+  <a class="ic" href="https://www.facebook.com/TasquinhadoBrasileiro" target="_blank" rel="noopener" aria-label="Facebook"><svg class="fb-glyph" viewBox="0 0 24 24" width="22" height="22" fill="#7A1A24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22z"/></svg></a>
+  <a class="ic" href="https://www.instagram.com/tasquinhadobrasileiro/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#7A1A24" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="#7A1A24" stroke="none"/></svg></a>
+  <a class="ic" href="https://www.tripadvisor.pt/Restaurant_Review-g189149-d17323219-Reviews-Tasquinha_do_Brasileiro-Viseu_Viseu_District_Northern_Portugal.html" target="_blank" rel="noopener" aria-label="TripAdvisor"><img class="tc-a" src="assets/tc-owl-bordo.svg" alt="TripAdvisor"><img class="tc-b" src="assets/tc-owl-gold.svg" alt=""></a>
+</div></div>
     <button type="button" class="burger" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -251,29 +349,69 @@ h3{font-size:18px;letter-spacing:.1em}
       <a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20reserva" target="_blank" rel="noopener" data-i18n="btnRes">Reservar pelo WhatsApp</a>
       <button type="button" class="btn line" data-open="takeaway" data-i18n="btnTake">Encomendar take-away</button>
     </div>
+    <a class="tc-link" href="https://www.tripadvisor.pt/Restaurant_Review-g189149-d17323219-Reviews-Tasquinha_do_Brasileiro-Viseu_Viseu_District_Northern_Portugal.html" target="_blank" rel="noopener" aria-label="Tasquinha do Brasileiro no TripAdvisor"><img class="tc-badge" src="assets/travelers-choice-bordo.svg" alt="Travelers' Choice"></a>
   </div>
   <a class="scroll-hint" href="#menu" data-i18n="scrollH">Deslize para ver mais</a>
 </section>
 
 
 
+<section class="sec hist" id="historia">
+  <div class="wrap">
+    <p class="label" data-i18n="histL">Desde 1965 · Viseu</p>
+    <h2 data-i18n="histH">A nossa história</h2>
+    <div class="hist-txt">
+      <p>Em 1965, na Rua das Pedras Alçadas, em Viseu, os avós Eduardo e Mariana abriram a Tasca e Hospedaria ‘O Brasileiro’, depois de uma década emigrados no Brasil.</p>
+      <p>Com os três filhos, Arnaldo, Cidália e Lurdes, a casa dedicou-se à arte de bem acolher e servir, e ficou conhecida pelos seus petiscos e pela cozinha tradicional portuguesa.</p>
+      <p>Com a continuidade do filho mais velho, Arnaldo, e da nora, Anabela, a casa reforçou a sua presença e, em 2019, mudou-se para a Rua Camilo Castelo Branco.</p>
+      <p>O Arnaldo foi o motor da casa desde o primeiro dia. Com ele a tasquinha cresceu, e as mesas cheias, as gargalhadas e a partilha fizeram parte da sua vida ligada à restauração.</p>
+      <p class="hist-quote">“Aprendeu desde pequeno a cuidar do cliente como família.”</p>
+      <p>Hoje a tasquinha continua no núcleo familiar: a Chef Anabela, mulher do Arnaldo, e as filhas, que trazem inovação sem perder a tradição. A mesma receita, o mesmo cuidado.</p>
+      <p>A tasquinha será sempre do Brasileiro, mas a comida será tradicionalmente portuguesa.</p>
+    </div>
+    <div class="slides" id="slides" aria-roledescription="carrossel">
+      <figure class="on"><img src="assets/fachada-2018.webp" alt="Fachada d'O Brasileiro em 2018"><figcaption>O Brasileiro - 2018</figcaption></figure>
+      <figure><img src="assets/arnaldo-anabela.webp" alt="Arnaldo e Anabela"><figcaption>Arnaldo e Anabela</figcaption></figure>
+      <figure><img src="assets/anabela-arnaldo-1986.webp" alt="Anabela e Arnaldo em 1986"><figcaption>Anabela e Arnaldo - 1986</figcaption></figure>
+      <figure><img src="assets/lucia-1998.webp" alt="Lúcia em 1998"><figcaption>Lúcia - 1998</figcaption></figure>
+      <figure><img src="assets/isabel-sandra-1998.webp" alt="Isabel e Sandra em 1998"><figcaption>Isabel e Sandra - 1998</figcaption></figure>
+      <figure><img src="assets/maria-fatima-1999.webp" alt="Maria de Fátima em 1999"><figcaption>Maria de Fátima - 1999</figcaption></figure>
+      <button class="sl-btn sl-prev" aria-label="Anterior">&#8249;</button>
+      <button class="sl-btn sl-next" aria-label="Seguinte">&#8250;</button>
+      <div class="sl-dots"></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var root=document.getElementById('slides'); if(!root) return;
+  var slides=root.querySelectorAll('figure'), dots=root.querySelector('.sl-dots'), i=0, t;
+  slides.forEach(function(_,k){ var b=document.createElement('button'); b.setAttribute('aria-label','Foto '+(k+1)); b.onclick=function(){go(k);reset();}; dots.appendChild(b); });
+  function show(){ slides.forEach(function(f,k){ f.classList.toggle('on',k===i); }); dots.querySelectorAll('button').forEach(function(b,k){ b.classList.toggle('on',k===i); }); }
+  function go(k){ i=(k+slides.length)%slides.length; show(); }
+  function reset(){ clearInterval(t); t=setInterval(function(){ go(i+1); },5000); }
+  root.querySelector('.sl-prev').onclick=function(){ go(i-1); reset(); };
+  root.querySelector('.sl-next').onclick=function(){ go(i+1); reset(); };
+  show(); reset();
+})();
+</script>
 <section class="sec first" id="menu">
   <div class="wrap">
     <p class="label" style="text-align:center" data-i18n="menuL">Para comer, petiscar e levar</p>
     <h2 style="text-align:center" data-i18n="menuH">Menus</h2>
     <div class="menu-grid">
       <article class="card" data-open="refeicoes" tabindex="0" role="button">
-        <div class="img"><img src="assets/menu-refeicoes.jpg" alt="Refeições" loading="lazy"></div>
+        <div class="img"><img src="assets/menu-refeicoes.webp" alt="Refeições" loading="lazy"></div>
         <h3 data-i18n="m1t">Refeições</h3>
         <p data-i18n="m1p">Pratos tradicionais portugueses, feitos com a calma de sempre.</p>
       </article>
-      <article class="card" data-open="bebidas" tabindex="0" role="button">
-        <div class="img"><img src="assets/menu-garrafeira.jpg" alt="Garrafeira" loading="lazy"></div>
+      <article class="card" data-open="petiscos" tabindex="0" role="button">
+        <div class="img"><img src="assets/petiscos-show.webp" alt="Petiscos" loading="lazy"></div>
         <h3 data-i18n="m2t">Petiscos</h3>
-        <p data-i18n="m2p">Para partilhar, com um bom vinho ou uma cerveja.</p>
+        <p data-i18n="m2p">Pequenos prazeres disponíveis a qualquer hora.</p>
       </article>
       <article class="card" data-open="takeaway" tabindex="0" role="button">
-        <div class="img"><img src="assets/menu-takeaway.jpg" alt="Take-away" loading="lazy"></div>
+        <div class="img"><img src="assets/menu-takeaway.webp" alt="Take-away" loading="lazy"></div>
         <h3 data-i18n="m3t">Take-away</h3>
         <p data-i18n="m3p">Leve a tasquinha para casa. Encomende pelo WhatsApp.</p>
       </article>
@@ -301,7 +439,7 @@ h3{font-size:18px;letter-spacing:.1em}
         <p class="ndesc">A escolha mais exclusiva da época, com sabores selecionados e pratos de eleição.</p>
       </article>
     </div>
-    <p class="ntext nnovo"><strong>Novidade:</strong> este ano pode oferecer a prenda de bem comer com o Voucher Tasquinha, <span class="nsm">disponível junto dos nossos colaboradores.</span></p>
+    <p class="ntext nnovo"><strong>Novidade:</strong> este ano pode oferecer a prenda de bem comer com o <span class="vt" tabindex="0">Voucher Tasquinha<span class="vt-pop"><img src="assets/voucher-tasquinha.webp" alt="Voucher Tasquinha" loading="lazy"></span></span>, <br><span class="nsm">disponível junto dos nossos colaboradores.</span></p>
     <div class="modal-cta" style="text-align:center;margin-top:var(--s4)">
       <a class="btn line" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar para o Natal</a>
     </div>
@@ -319,18 +457,30 @@ h3{font-size:18px;letter-spacing:.1em}
     </div>
   <div class="marquee" aria-hidden="true">
     <div class="track">
-        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-refeicoes.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-petiscos.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/menu-takeaway.jpg" alt="" loading="lazy"></figure>
-        <figure class="tile"><img src="assets/hero-landscape.jpg" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-1.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-2.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-3.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-4.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-5.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-6.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-7.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-8.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-1.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-2.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-3.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-4.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-5.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-6.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-7.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-8.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-1.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-2.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-3.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-4.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-5.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-6.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-7.webp" alt="" loading="lazy"></figure>
+        <figure class="tile"><img src="assets/catering-8.webp" alt="" loading="lazy"></figure>
     </div>
   </div>
   <p class="cater-note"><span data-i18n="catN1">Para mais informações ou para pedir orçamento,</span> <a href="https://wa.me/351928057856" target="_blank" rel="noopener" data-i18n="catLink">contacte-nos pelo WhatsApp</a>.</p>
@@ -338,6 +488,29 @@ h3{font-size:18px;letter-spacing:.1em}
 </section>
 
 
+<div class="wa-menu" id="wa-menu" hidden><p>Como podemos ajudar?</p><a href="https://wa.me/351928057856?text=Ol%C3%A1%21%20Gostava%20de%20reservar%20uma%20mesa." target="_blank" rel="noopener">Reservar uma mesa</a><a href="https://wa.me/351928057856?text=Ol%C3%A1%21%20Quero%20fazer%20uma%20encomenda%20de%20take-away." target="_blank" rel="noopener">Encomendar take-away</a><a href="https://wa.me/351928057856?text=Ol%C3%A1%21%20Gostava%20de%20pedir%20or%C3%A7amento%20para%20catering." target="_blank" rel="noopener">Catering</a><a href="https://wa.me/351928057856?text=Ol%C3%A1%21%20Gostava%20de%20marcar%20um%20jantar%20de%20grupo." target="_blank" rel="noopener">Jantar de grupo</a><form class="wa-free" action="https://wa.me/351928057856" method="get" target="_blank"><input type="text" name="text" required maxlength="300" placeholder="Outra questão" aria-label="Escreva a sua questão"><button type="submit" aria-label="Enviar pelo WhatsApp">&#10148;</button></form></div><button type="button" class="wa-fab" id="wa-fab" aria-label="Contactar por WhatsApp" aria-expanded="false" aria-controls="wa-menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.016,12.271A4.818,4.818,0,0,1,7,9.709a2.777,2.777,0,0,1,.867-2.066.911.911,0,0,1,.661-.31c.165,0,.33,0,.475.009s.356-.058.557.425.7,1.715.764,1.839a.453.453,0,0,1,.02.433,1.694,1.694,0,0,1-.247.414c-.124.144-.261.323-.372.433s-.253.258-.109.506A7.474,7.474,0,0,0,11,13.107a6.778,6.778,0,0,0,1.992,1.229c.248.124.393.1.537-.062s.619-.723.784-.971.331-.206.558-.124,1.445.682,1.692.806.413.186.475.289a2.072,2.072,0,0,1-.144,1.178,2.553,2.553,0,0,1-1.672,1.177,3.389,3.389,0,0,1-1.561-.1,14.282,14.282,0,0,1-1.412-.521A11.043,11.043,0,0,1,8.016,12.271ZM2.045,22l1.406-5.136a9.914,9.914,0,1,1,8.591,4.964h0A9.918,9.918,0,0,1,7.3,20.622ZM3.8,11.91a8.217,8.217,0,0,0,1.259,4.384l.2.312-.832,3.04,3.119-.818.3.178a8.223,8.223,0,0,0,4.194,1.148h0A8.24,8.24,0,1,0,3.8,11.91Z"/></svg></button><script>(function(){var b=document.getElementById("wa-fab"),m=document.getElementById("wa-menu");if(!b||!m)return;b.addEventListener("click",function(){var o=m.hasAttribute("hidden");if(o){m.removeAttribute("hidden");}else{m.setAttribute("hidden","");}b.setAttribute("aria-expanded",String(o));});function vis(){var on=true;b.hidden=!on;if(!on){m.setAttribute("hidden","");b.setAttribute("aria-expanded","false");}}window.addEventListener("scroll",function(){vis();if(m.contains(document.activeElement)&&document.activeElement.tagName==="INPUT")return;m.setAttribute("hidden","");b.setAttribute("aria-expanded","false");},{passive:true});vis();document.addEventListener("click",function(e){if(!m.hasAttribute("hidden")&&!m.contains(e.target)&&!b.contains(e.target)){m.setAttribute("hidden","");b.setAttribute("aria-expanded","false");}});})();</script>
+<script>(function(){
+  var vts=document.querySelectorAll('.vt'); if(!vts.length) return;
+  var fine=window.matchMedia && matchMedia('(hover:hover) and (pointer:fine)').matches;
+  vts.forEach(function(el){
+    var img=el.querySelector('.vt-pop img');
+    if(fine){
+      el.addEventListener('mousemove',function(e){
+        var r=el.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        img.style.transform='perspective(700px) rotateX('+(-y*16)+'deg) rotateY('+(x*16)+'deg) translate3d('+(x*12)+'px,'+(y*8)+'px,0)';
+      });
+      el.addEventListener('mouseleave',function(){ img.style.transform=''; });
+    } else {
+      el.addEventListener('click',function(e){ e.stopPropagation(); el.classList.toggle('open'); });
+      el.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); el.classList.toggle('open'); } });
+    }
+  });
+  if(!fine){
+    window.addEventListener('scroll',function(){ vts.forEach(function(el){ el.classList.remove('open'); }); },{passive:true});
+    document.addEventListener('click',function(e){ vts.forEach(function(el){ if(!el.contains(e.target)) el.classList.remove('open'); }); });
+  }
+})();</script>
 </main>
 
 <div class="modal" id="takeaway" hidden>
@@ -345,6 +518,12 @@ h3{font-size:18px;letter-spacing:.1em}
     <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
     <div class="mbody">
     <h2 id="ta-title" class="modal-h" data-i18n="taT">Take-Away</h2>
+    <div class="mcat">
+      <h3>Pratos do Dia</h3>
+      <ul>
+        <li><span>Consulte a disponibilidade através do nosso <a href="https://www.instagram.com/tasquinhadobrasileiro/" target="_blank" rel="noopener" style="color:var(--bordo);text-decoration:underline">Instagram</a>.</span></li>
+      </ul>
+    </div>
     <div class="mcat">
       <h3 data-i18n="sCarne">Carne</h3>
       <ul>
@@ -393,150 +572,161 @@ h3{font-size:18px;letter-spacing:.1em}
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="refeicoes-title">
     <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
     <div class="mbody">
-    <h2 id="refeicoes-title" class="modal-h" data-i18n="m1t">Refeições e Petiscos</h2>
-    <p class="modal-soon" data-i18n="soonT">Carta em breve.</p>
+    <h2 id="refeicoes-title" class="modal-h" data-i18n="m1t">Refeições</h2>
+    <div class="mcat">
+      <h3>Menu executivo</h3>
+      <ul>
+        <li><span>Sopa + Pão + <a href="https://www.instagram.com/tasquinhadobrasileiro/" target="_blank" rel="noopener" style="color:var(--bordo);text-decoration:underline">Prato do Dia</a> + Bebida + Café</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Entradas</h3>
+      <ul>
+        <li><span>Cesto de pão</span></li>
+        <li><span>Azeitonas</span></li>
+        <li><span>Sopa do dia</span></li>
+        <li><span>Tábua de manteigas e patê</span></li>
+        <li><span>Tábua de queijos e presunto</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Peixes</h3>
+      <ul>
+        <li><span>Bacalhau à Tasquinha</span></li>
+        <li><span>Bacalhau à Lagareiro</span></li>
+        <li><span>Polvo à Lagareiro</span></li>
+        <li><span>Polvo à Tasquinha</span></li>
+        <li><span>Sardinha petinga</span></li>
+        <li><span>Filetes de pescada</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Acompanhamentos</h3>
+      <ul>
+        <li><span>Batata frita</span></li>
+        <li><span>Batata à murro</span></li>
+        <li><span>Legumes salteados</span></li>
+        <li><span>Feijão preto</span></li>
+        <li><span>Arroz branco</span></li>
+        <li><span>Arroz de feijão</span></li>
+        <li><span>Salada</span></li>
+        <li><span>Ovo</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Carnes</h3>
+      <ul>
+        <li><span>Bitoque de porco ou frango | panado</span></li>
+        <li><span>Bitoque de vitela</span></li>
+        <li><span>Alheira com ovo</span></li>
+        <li><span>Lombinhos de porco grelhados ou com molho de cogumelos</span></li>
+        <li><span>Grelhada mista</span></li>
+        <li><span>Bife da vazia à tasquinha</span></li>
+        <li><span>Picanha</span></li>
+        <li><span>Iscas de fígado de cebolada</span></li>
+        <li><span>Francesinha de porco ou frango</span></li>
+        <li><span>Francesinha de vitela</span></li>
+        <li><span>Naco serrano com queijo da serra</span></li>
+        <li><span>Naco de vitela com azeite e alho</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Vegetariano</h3>
+      <ul>
+        <li><span>Hambúrguer vegetariano</span></li>
+        <li><span>Brás de cogumelos</span></li>
+        <li><span>Ovos rotos de cogumelos</span></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Menu Kids · 10 €</h3>
+      <ul>
+        <li><span>Sopa + Nuggets (caseiros) ou Filetes de pescada + Acompanhamento (batata frita, arroz e legumes) + Bebida</span></li>
+      </ul>
+    </div>
+    <p class="mnote">Menu exclusivo para crianças com idade inferior a 10 anos.</p>
     </div>
     <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
   </div>
 </div>
-<div class="modal" id="bebidas" hidden>
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="bebidas-title">
+<div class="modal" id="petiscos" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="petiscos-title">
     <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
     <div class="mbody">
-    <h2 id="bebidas-title" class="modal-h" data-i18n="m2t">Garrafeira</h2>
+    <h2 id="petiscos-title" class="modal-h" data-i18n="m2t">Petiscos</h2>
     <div class="mcat">
-      <h3>Vinhos tintos</h3>
-      <h4 class="mreg">Dão</h4>
+      <h3>Carnes</h3>
       <ul>
-        <li><span>Morgado de Silgueiros</span></li>
-        <li><span>Catedral Reserva</span></li>
-        <li><span>Cabriz</span></li>
-        <li><span>Pedra Cancela</span></li>
-        <li><span>Ribeiro Santo</span></li>
-        <li><span>Passarella</span></li>
-        <li><span>PMA</span></li>
-        <li><span>Casa de Santar</span></li>
-        <li><span>Terras de Figueiral</span></li>
-        <li><span>Dão Penalva Jaen / Tinta Roriz</span></li>
-        <li><span>Adega de Penalva Reserva</span></li>
-        <li><span>Desalinhado</span></li>
-        <li><span>Quinta dos Três Maninhos</span></li>
-        <li><span>Centenariae Vineae</span></li>
-      </ul>
-      <h4 class="mreg">Douro</h4>
-      <ul>
-        <li><span>Montes Ermos</span></li>
-        <li><span>Papa Figos</span></li>
-      </ul>
-      <h4 class="mreg">Alentejo</h4>
-      <ul>
-        <li><span>Monte Velho</span></li>
-        <li><span>Trinca Bolotas</span></li>
-      </ul>
-      <h4 class="mreg">Setúbal</h4>
-      <ul>
-        <li><span>Piriquita</span></li>
+        <li><span>Prego no pão (bife de vaca)</span></li>
+        <li><span>Bifana no pão (bife de porco)</span></li>
+        <li><span>Panado no pão (bife de porco)</span></li>
+        <li><span>Presunto no pão</span></li>
+        <li><span>Alheira</span><small>1 unidade</small></li>
+        <li><span>Chouriça assada</span><small>1 unidade</small></li>
+        <li><span>Morcela</span></li>
+        <li><span>Moelas</span></li>
+        <li><span>Pica-pau de porco</span></li>
+        <li><span>Pica-pau de vitela ou misto</span></li>
+        <li><span>Codorniz</span><small>1 unidade</small></li>
+        <li><span>Iscas de fígado grelhadas ou de cebolada</span></li>
+        <li><span>Meia francesinha de porco ou frango | vitela</span></li>
       </ul>
     </div>
     <div class="mcat">
-      <h3>Vinhos brancos</h3>
-      <h4 class="mreg">Dão</h4>
+      <h3>Ovos e cogumelos</h3>
       <ul>
-        <li><span>Cabriz</span></li>
-        <li><span>Pedra Cancela</span></li>
-        <li><span>Passarella</span></li>
-        <li><span>Casa de Santar</span></li>
-        <li><span>Dão Bical</span></li>
-        <li><span>Dão Encruzado</span></li>
-        <li><span>Q. dos Monteirinhos</span></li>
-      </ul>
-      <h4 class="mreg">Douro</h4>
-      <ul>
-        <li><span>Montes Ermos Reserva</span></li>
-        <li><span>Papa Figos</span></li>
+        <li><span>Omelete de queijo e fiambre</span></li>
+        <li><span>Ovos rotos de presunto</span></li>
+        <li><span>Ovos mexidos com alheira</span></li>
+        <li><span>Cogumelos salteados</span></li>
       </ul>
     </div>
     <div class="mcat">
-      <h3>Rosé, verdes e sangria</h3>
-      <h4 class="mreg">Rosé</h4>
+      <h3>Acompanhamentos</h3>
       <ul>
-        <li><span>Mateus</span></li>
-      </ul>
-      <h4 class="mreg">Verde</h4>
-      <ul>
-        <li><span>Casal Garcia</span></li>
-        <li><span>Muralhas</span></li>
-      </ul>
-      <h4 class="mreg">Sangria</h4>
-      <ul>
-        <li><span>Branca / tinta / frutos vermelhos</span><small>1 L · 1,75 L</small></li>
-        <li><span>Maracujá</span><small>1 L · 1,75 L</small></li>
+        <li><span>Ovo</span></li>
+        <li><span>Batata frita</span></li>
+        <li><span>Batata à murro</span></li>
+        <li><span>Azeitonas</span></li>
+        <li><span>Legumes salteados</span></li>
+        <li><span>Feijão preto</span></li>
+        <li><span>Arroz branco</span></li>
+        <li><span>Arroz de feijão</span></li>
+        <li><span>Salada</span></li>
+        <li><span>Cesto de pão</span></li>
       </ul>
     </div>
     <div class="mcat">
-      <h3>Espumantes</h3>
+      <h3>Peixes</h3>
       <ul>
-        <li><span>Raposeira</span><small>Doce · meio seco · bruto</small></li>
-        <li><span>Terras de Demo</span><small>Doce · meio seco · bruto</small></li>
-        <li><span>Murganheira</span><small>Doce · meio seco · bruto</small></li>
+        <li><span>Bacalhau frito</span></li>
+        <li><span>Bacalhau à lagareiro lascado</span></li>
+        <li><span>Salada de bacalhau desfiado</span></li>
+        <li><span>Bolos de bacalhau</span><small>3 unidades</small></li>
+        <li><span>Sardinha petinga</span><small>6 unidades</small></li>
+        <li><span>Sardinha em escabeche</span><small>6 unidades</small></li>
+        <li><span>Polvo frito</span></li>
+        <li><span>Salada de polvo cozido</span></li>
+        <li><span>Filete de pescada frito</span></li>
+        <li><span>Enguias</span></li>
       </ul>
     </div>
     <div class="mcat">
-      <h3>Cervejas e bar</h3>
-      <h4 class="mreg">Cervejas</h4>
+      <h3>Tostas e baguetes</h3>
       <ul>
-        <li><span>Sagres</span><small>À pressão</small></li>
-        <li><span>Bohemia</span><small>À pressão</small></li>
-        <li><span>Mini</span><small>20 cl</small></li>
-        <li><span>Super Bock</span><small>33 cl</small></li>
-        <li><span>Tango</span><small>20 cl</small></li>
-        <li><span>Martini com cerveja</span></li>
-        <li><span>Favaios com cerveja</span></li>
-      </ul>
-      <h4 class="mreg">Gin</h4>
-      <ul>
-        <li><span>Tanqueray</span><small>Raspa de limão ou uvas & louro</small></li>
-        <li><span>Gordon's</span><small>Raspa de limão & zimbro</small></li>
-      </ul>
-      <h4 class="mreg">Whisky</h4>
-      <ul>
-        <li><span>Cutty Sark</span></li>
-        <li><span>Ballantines</span></li>
-        <li><span>J.B. Novo</span></li>
-        <li><span>J.B. 15 anos</span></li>
-        <li><span>Jameson</span></li>
-        <li><span>Logan</span></li>
-        <li><span>Famous Grouse</span></li>
+        <li><span>Mista</span><small>Queijo e fiambre</small></li>
+        <li><span>Mista especial</span><small>Queijo, fiambre, tomate, alface, cenoura, ovo</small></li>
+        <li><span>Atum</span></li>
+        <li><span>Pasta de atum</span></li>
+        <li><span>Pasta de frango</span></li>
+        <li><span>Pasta de delícias</span><small>Tomate, alface, cenoura, ovo, milho</small></li>
+        <li><span>Serrana</span><small>Queijo da serra e presunto</small></li>
+        <li><span>Cogumelos</span><small>Queijo e ovo</small></li>
+        <li><span>Cachorro à tasquinha</span></li>
       </ul>
     </div>
-    <div class="mcat">
-      <h3>Aperitivos e digestivos</h3>
-      <ul>
-        <li><span>Amarelinha</span></li>
-        <li><span>Ginginha</span></li>
-        <li><span>Moscatel Favaios</span><small>Douro</small></li>
-        <li><span>Moscatel Alambre Roxo</span></li>
-        <li><span>Amêndoa amarga</span></li>
-        <li><span>Ponte de Marante</span></li>
-        <li><span>Vinho do Porto</span></li>
-        <li><span>Martini rosso / branco</span></li>
-        <li><span>1920</span></li>
-        <li><span>Constantino</span></li>
-        <li><span>Croft</span></li>
-        <li><span>Macieira</span></li>
-        <li><span>Macieira Cream</span></li>
-        <li><span>Licor Beirão</span></li>
-        <li><span>Rum</span></li>
-        <li><span>Aliança Velha</span></li>
-        <li><span>Ricard</span></li>
-        <li><span>Aguardente S. Domingos Bagaceira</span></li>
-        <li><span>Aguardente S. Domingos Velhíssima</span></li>
-        <li><span>CRF</span></li>
-        <li><span>Martha's</span></li>
-      </ul>
+    <p class="mnote">Todas as tostas e baguetes contêm manteiga e oregãos.</p>
     </div>
-    </div>
-    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
   </div>
 </div>
 <div class="modal" id="natal-azevinho" hidden>
@@ -611,6 +801,49 @@ h3{font-size:18px;letter-spacing:.1em}
     <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
   </div>
 </div>
+<section class="sec" id="faq">
+  <div class="wrap">
+    <p class="label" style="text-align:center" data-i18n="faqL">Perguntas frequentes</p>
+    <h2 style="text-align:center" data-i18n="faqH">FAQ</h2>
+    <div class="faq" style="margin-top:var(--s4)">
+      <details>
+        <summary>Porque se chama Tasquinha do Brasileiro?</summary>
+        <p>O nome vem dos nossos avós, Eduardo e Mariana, que abriram a Tasca e Hospedaria ‘O Brasileiro’ em Viseu, em 1965, depois de viverem uma década no Brasil. Hoje a cozinha é tradicionalmente portuguesa. A história completa está em <a href="#historia" style="color:var(--bordo)">A nossa história</a>.</p>
+      </details>
+      <details>
+        <summary>Que tipo de comida servem?</summary>
+        <p>Servimos cozinha tradicionalmente portuguesa, com petiscos e pratos de sempre. A avó Mariana trouxe com ela a famosa Feijoada à Brasileira, tão cobiçada e procurada pelos nossos clientes, e as Iscas de fígado de cebolada e a Picanha, uma confeção inspirada nas saudades que tinha da cozinha brasileira.</p>
+      </details>
+      <details>
+        <summary>Fazem jantares de grupo?</summary>
+        <p>Sim. Pode reservar um jantar de grupo connosco e podemos averiguar a temática e a ementa para a sua ocasião. Conte-nos pelo <a href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20grupo" target="_blank" rel="noopener" style="color:var(--bordo)">WhatsApp</a>.</p>
+      </details>
+      <details>
+        <summary>Como faço uma reserva?</summary>
+        <p>Pode reservar pelo <a href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20fazer%20uma%20reserva" target="_blank" rel="noopener" style="color:var(--bordo)">WhatsApp</a> ou por chamada para o <a href="tel:+351928057856" style="color:var(--bordo)">928 057 856</a>.</p>
+      </details>
+      <details>
+        <summary>Como encomendo take-away?</summary>
+        <p>Pode fazer a sua encomenda de take-away pelo <a href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20fazer%20um%20pedido%20take-away" target="_blank" rel="noopener" style="color:var(--bordo)">WhatsApp</a>.</p>
+      </details>
+      <details>
+        <summary>Fazem catering para eventos?</summary>
+        <p>Sim. Para pedir orçamento, <a href="https://wa.me/351928057856" target="_blank" rel="noopener" style="color:var(--bordo)">contacte-nos pelo WhatsApp</a>.</p>
+      </details>
+      <details>
+        <summary>Onde fica o restaurante e qual é o horário?</summary>
+        <p>O restaurante encontra-se em frente à Loja do Cidadão, na Rua Camilo Castelo Branco, 3510-427 Viseu.</p>
+        <p>Para consultar os horários, veja o rodapé deste site ou o <a href="https://share.google/jwl54v46t9Kaj5WVU" target="_blank" rel="noopener" style="color:var(--bordo)">Google Business Profile</a>.</p>
+        <p>Para alterações pontuais, esteja atento às nossas redes sociais.</p>
+      </details>
+      <details>
+        <summary>Posso oferecer uma refeição como prenda?</summary>
+        <p>Sim. Este ano pode oferecer a prenda de bem comer com o Voucher Tasquinha, disponível junto dos nossos colaboradores.</p>
+      </details>
+    </div>
+  </div>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Porque se chama Tasquinha do Brasileiro?", "acceptedAnswer": {"@type": "Answer", "text": "O nome vem dos nossos avós, Eduardo e Mariana, que abriram a Tasca e Hospedaria ‘O Brasileiro’ em Viseu, em 1965, depois de viverem uma década no Brasil. Hoje a cozinha é tradicionalmente portuguesa. A história completa está em A nossa história."}}, {"@type": "Question", "name": "Que tipo de comida servem?", "acceptedAnswer": {"@type": "Answer", "text": "Servimos cozinha tradicionalmente portuguesa, com petiscos e pratos de sempre. A avó Mariana trouxe com ela a famosa Feijoada à Brasileira, tão cobiçada e procurada pelos nossos clientes, e as Iscas de fígado de cebolada e a Picanha, uma confeção inspirada nas saudades que tinha da cozinha brasileira."}}, {"@type": "Question", "name": "Fazem jantares de grupo?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Pode reservar um jantar de grupo connosco e podemos averiguar a temática e a ementa para a sua ocasião. Conte-nos pelo WhatsApp."}}, {"@type": "Question", "name": "Como faço uma reserva?", "acceptedAnswer": {"@type": "Answer", "text": "Pode reservar pelo WhatsApp ou por chamada para o 928 057 856."}}, {"@type": "Question", "name": "Como encomendo take-away?", "acceptedAnswer": {"@type": "Answer", "text": "Pode fazer a sua encomenda de take-away pelo WhatsApp."}}, {"@type": "Question", "name": "Fazem catering para eventos?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Para pedir orçamento, contacte-nos pelo WhatsApp."}}, {"@type": "Question", "name": "Onde fica o restaurante e qual é o horário?", "acceptedAnswer": {"@type": "Answer", "text": "O restaurante encontra-se em frente à Loja do Cidadão, na Rua Camilo Castelo Branco, 3510-427 Viseu. Para consultar os horários, veja o rodapé deste site ou o Google Business Profile. Para alterações pontuais, esteja atento às nossas redes sociais."}}, {"@type": "Question", "name": "Posso oferecer uma refeição como prenda?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Este ano pode oferecer a prenda de bem comer com o Voucher Tasquinha, disponível junto dos nossos colaboradores."}}]}</script>
+</section>
 <footer class="foot" id="contactos">
   <div class="wrap foot-cols">
     <div class="fc">
@@ -639,10 +872,9 @@ h3{font-size:18px;letter-spacing:.1em}
         <p class="legal-line" data-i18n="legal">Chamada para rede móvel nacional</p>
       </div>
       <div class="icons fic">
-  <a class="ic" href="https://www.facebook.com/TasquinhadoBrasileiro" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22z"/></svg></a>
+  <a class="ic" href="https://www.facebook.com/TasquinhadoBrasileiro" target="_blank" rel="noopener" aria-label="Facebook"><svg class="fb-glyph" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22z"/></svg></a>
   <a class="ic" href="https://www.instagram.com/tasquinhadobrasileiro/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
-  <a class="ic" href="https://wa.me/351928057856" target="_blank" rel="noopener" aria-label="WhatsApp +351 928 057 856"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
-  <a class="ic" href="https://www.tripadvisor.pt/Restaurant_Review-g189149-d17323219-Reviews-Tasquinha_do_Brasileiro-Viseu_Viseu_District_Northern_Portugal.html" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg viewBox="0 0 24 24" width="26" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="6.5" cy="14" r="4"/><circle cx="17.5" cy="14" r="4"/><circle cx="6.5" cy="14" r="1.4" fill="currentColor" stroke="none"/><circle cx="17.5" cy="14" r="1.4" fill="currentColor" stroke="none"/><path d="M2 9.5c2-2.5 6-3 10-3s8 .5 10 3"/></svg></a>
+  <a class="ic" href="https://www.tripadvisor.pt/Restaurant_Review-g189149-d17323219-Reviews-Tasquinha_do_Brasileiro-Viseu_Viseu_District_Northern_Portugal.html" target="_blank" rel="noopener" aria-label="TripAdvisor"><img class="tc-a" src="assets/tc-owl-cream.svg" alt="TripAdvisor"><img class="tc-b" src="assets/tc-owl-gold.svg" alt=""></a>
 </div>
     </div>
   </div>
@@ -684,10 +916,10 @@ h3{font-size:18px;letter-spacing:.1em}
 const FORCE_LANG='pt';
 
 const I18N = {
- pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Preparada ao jeito do brasileiro",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições e Petiscos",m1p:"Pratos e petiscos para comer em qualquer hora.",m2t:"Garrafeira",m2p:"Uma garrafeira selecionada para acompanhar os melhores momentos.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
- en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Dishes and petiscos to eat at any time of day.",m2t:"Drinks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
- es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Bebidas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
- fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Boissons",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
+ pt:{mailL:"Lista de e-mails",scrollH:"Deslize para ver mais",legalPriv:"Política de Privacidade",legalCook:"Política de Cookies",legalTerms:"Termos e Condições",legalComp:"Livro de Reclamações",backL:"← Início",hoursL:"Horário",hour1:"Todos os dias, das 09h00 às 21h00",hour2:"Encerrado aos domingos",locL:"Localização",conL:"Contactos",socL:"Redes",nav1:"Sobre",nav2:"Menu",nav3:"Contactos",kicker:"Desde 1965 · Viseu",h1:"Em breve online",sub:"Comida Tradicional Portuguesa",sub2:"Servida com alma de tasquinha",btnRes:"Reservar Mesa",btnTake:"Encomendar take-away",mailQ:"Quer ser o primeiro a saber do nosso site ou de novidades e promoções da Tasquinha?",mailPh:"O seu e-mail",consent:"Aceito receber novidades da Tasquinha do Brasileiro.",mailBtn:"Subscrever",menuL:"Para comer, petiscar e levar",menuH:"Menus",m1t:"Refeições",m1p:"Pratos tradicionais portugueses, feitos com a calma de sempre.",m2t:"Petiscos",m2p:"Pequenos prazeres disponíveis a qualquer hora.",m3t:"Take-away",m3p:"Partilhe memórias e sabores no conforto de casa.",m3cta:"Encomendar no WhatsApp",photoSoon:"Foto a confirmar",contL:"Contactos",contH:"Onde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Em frente à Loja do Cidadão",legal:"Chamada para rede móvel nacional",cookieT:"Usamos apenas cookies técnicos e essenciais.",cookieOk:"Aceitar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [a preencher]"},
+ en:{mailL:"Mail List",scrollH:"Scroll for more",legalPriv:"Privacy Policy",legalCook:"Cookie Policy",legalTerms:"Terms and Conditions",legalComp:"Complaints Book",backL:"← Home",hoursL:"Hours",hour1:"Every day, 09:00 to 21:00",hour2:"Closed on Sundays",locL:"Location",conL:"Contact",socL:"Social",nav1:"About",nav2:"Menu",nav3:"Contact",kicker:"Since 1965 · Viseu",h1:"Coming soon online",sub:"Bookings, Take-Away, Menus and More news!",sub2:"All a tap away.",btnRes:"Book a Table",btnTake:"Order take-away",mailQ:"Want to be the first to know about our site or Tasquinha news and promotions?",mailPh:"Your email",consent:"I agree to receive news from Tasquinha do Brasileiro.",mailBtn:"Subscribe",menuL:"To eat, to nibble, to take home",menuH:"Menus",m1t:"Meals and Petiscos",m1p:"Traditional Portuguese dishes, made with the usual care.",m2t:"Snacks",m2p:"A curated cellar to accompany the best moments.",m3t:"Take-away",m3p:"Share memories and flavours in the comfort of home.",m3cta:"Order on WhatsApp",photoSoon:"Photo to come",contL:"Contact",contH:"Where we are",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Opposite the Loja do Cidadão",legal:"Call to national mobile network",cookieT:"We only use essential, technical cookies.",cookieOk:"Accept",cookieLink:"Cookie Policy",foot:"Tasquinha do Brasileiro · Viseu",nif:"VAT [to be filled in]"},
+ es:{mailL:"Lista de correo",scrollH:"Desliza para ver más",legalPriv:"Política de Privacidad",legalCook:"Política de Cookies",legalTerms:"Términos y Condiciones",legalComp:"Libro de Reclamaciones",backL:"← Inicio",hoursL:"Horario",hour1:"Todos los días, de 09:00 a 21:00",hour2:"Cerrado los domingos",locL:"Ubicación",conL:"Contacto",socL:"Redes",nav1:"Sobre",nav2:"Menú",nav3:"Contacto",kicker:"Desde 1965 · Viseu",h1:"Muy pronto en línea",sub:"Reservas, Para llevar, Menús y Más novedades!",sub2:"Todo a un toque de distancia.",btnRes:"Reservar Mesa",btnTake:"Pedir para llevar",mailQ:"¿Quiere ser el primero en saber sobre nuestra web o las novedades y promociones de la Tasquinha?",mailPh:"Su correo electrónico",consent:"Acepto recibir novedades de la Tasquinha do Brasileiro.",mailBtn:"Suscribirse",menuL:"Para comer, picar y llevar",menuH:"Menús",m1t:"Comidas y Petiscos",m1p:"Platos y petiscos para comer a cualquier hora.",m2t:"Tapas",m2p:"Una bodega selecta para acompañar los mejores momentos.",m3t:"Para llevar",m3p:"Comparta recuerdos y sabores en la comodidad de su casa.",m3cta:"Pedir por WhatsApp",photoSoon:"Foto por confirmar",contL:"Contacto",contH:"Dónde estamos",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Frente a la Loja do Cidadão",legal:"Llamada a red móvil nacional",cookieT:"Solo usamos cookies técnicas y esenciales.",cookieOk:"Aceptar",cookieLink:"Política de Cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [por completar]"},
+ fr:{mailL:"Liste de diffusion",scrollH:"Faites défiler",legalPriv:"Politique de confidentialité",legalCook:"Politique de cookies",legalTerms:"Conditions générales",legalComp:"Livre de réclamations",backL:"← Accueil",hoursL:"Horaires",hour1:"Tous les jours, de 9h00 à 21h00",hour2:"Fermé le dimanche",locL:"Adresse",conL:"Contact",socL:"Réseaux",nav1:"À propos",nav2:"Menu",nav3:"Contact",kicker:"Depuis 1965 · Viseu",h1:"Bientôt en ligne",sub:"Réservations, À emporter, Menus et Plus de nouveautés !",sub2:"Tout à portée d’un clic.",btnRes:"Réserver une table",btnTake:"Commander à emporter",mailQ:"Voulez-vous être le premier informé de notre site et des nouveautés et promotions de la Tasquinha ?",mailPh:"Votre e-mail",consent:"J'accepte de recevoir les nouvelles de la Tasquinha do Brasileiro.",mailBtn:"S'inscrire",menuL:"Manger, grignoter, emporter",menuH:"Menus",m1t:"Repas et Petiscos",m1p:"Plats et petiscos à savourer à toute heure.",m2t:"Petiscos",m2p:"Une cave sélectionnée pour accompagner les meilleurs moments.",m3t:"À emporter",m3p:"Partagez souvenirs et saveurs dans le confort de chez vous.",m3cta:"Commander sur WhatsApp",photoSoon:"Photo à venir",contL:"Contact",contH:"Où nous trouver",addr:"Rua Camilo Castelo Branco",zip:"3510-427 Viseu",landmark:"Face à la Loja do Cidadão",legal:"Appel vers réseau mobile national",cookieT:"Nous utilisons uniquement des cookies techniques et essentiels.",cookieOk:"Accepter",cookieLink:"Politique de cookies",foot:"Tasquinha do Brasileiro · Viseu",nif:"NIF [à compléter]"}
 };
 
 (function(){

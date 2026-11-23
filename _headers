@@ -1,0 +1,13 @@
+/*
+  Strict-Transport-Security: max-age=31536000
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-2J4kIoCzqYo3NBLyM7y6FZIF2SIe15qI+kjz3J8e99g=' 'sha256-KD8dl00NlSw1SfiIeZdKype9GNF4J6SJ76AMuoVrzFg=' 'sha256-PVKRM1FiKeV+c3p6UAq0T/SlX87fuGy1Ibayh6XBkAI=' 'sha256-WOOcJqTpYWJic+LeCobXywesiuAZo0mNAoZrugi/PBk=' 'sha256-xY2RCOl6GG6VsiMi6XyubtfY6vX+jwbddnGi6uzMyKw='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action https://wa.me; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests;
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  X-Robots-Tag: index, follow
+/assets/*
+  Cache-Control: public, max-age=604800
+/*.html
+  Cache-Control: no-cache
