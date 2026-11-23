@@ -1,6 +1,7 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/tasquin5/public_html/preview/
+    - export DEPLOYPATH=/home/tasquin5/public_html/
     - /bin/cp -R index.html politica-privacidade.html politica-cookies.html termos-condicoes.html livro-reclamacoes.html _headers .htaccess assets $DEPLOYPATH
-    - /usr/bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} \;
-    - /usr/bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} \;
+    - /usr/bin/find $DEPLOYPATH/assets -type d -exec /bin/chmod 755 {} \;
+    - /usr/bin/find $DEPLOYPATH/assets -type f -exec /bin/chmod 644 {} \;
+    - /bin/chmod 644 $DEPLOYPATH/index.html $DEPLOYPATH/politica-privacidade.html $DEPLOYPATH/politica-cookies.html $DEPLOYPATH/termos-condicoes.html $DEPLOYPATH/livro-reclamacoes.html $DEPLOYPATH/_headers $DEPLOYPATH/.htaccess
