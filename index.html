@@ -87,7 +87,7 @@ h3{font-size:18px;letter-spacing:.1em}
 .ncard p.ndesc{font-family:MetaforaLight,serif;font-size:14px;line-height:1.5;margin:0}
 .ntext{font-family:MetaforaLight,serif;font-size:15px;line-height:1.5;max-width:640px;margin:var(--s3) auto 0;text-align:center}
 .mprice{font-family:Metafora,serif;font-weight:700;font-size:16px;text-align:center;margin:0 0 var(--s3)}
-@media (min-width:768px){.natal-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:768px){.natal-grid{grid-template-columns:repeat(3,1fr)}}
 .natal{background:var(--bordo);color:var(--cream)}
 .natal .wrap{text-align:center}
 .natal h2{color:var(--cream)}
@@ -490,6 +490,13 @@ body:has(.nav.open) .cookie{display:none}
         <p class="nprice">35 € <span>p/ pessoa</span></p>
         <p class="ndesc">A escolha mais exclusiva da época, com sabores selecionados e pratos de eleição.</p>
       </article>
+      <article class="ncard" data-open="natal-presepio" tabindex="0" role="button">
+        <img class="nico" src="assets/icon-presepio.svg" alt="">
+        <p class="nlab">Novidade</p>
+        <h3>Presépio</h3>
+        <p class="nprice">27 € <span>p/ pessoa</span></p>
+        <p class="ndesc">Petiscos ao centro, na medida ideal para partilhar, para que não falte comida nem bebida à boa companhia.</p>
+      </article>
     </div>
     <p class="ntext nnovo"><strong>Novidade:</strong> este ano pode oferecer a prenda de bem comer com o <span class="vt" tabindex="0">Voucher Tasquinha<span class="vt-pop"><img src="assets/voucher-tasquinha.webp" alt="Voucher Tasquinha" loading="lazy"></span></span>, <br><span class="nsm">disponível junto dos nossos colaboradores.</span></p>
     <div class="modal-cta" style="text-align:center;margin-top:var(--s4)">
@@ -847,6 +854,49 @@ body:has(.nav.open) .cookie{display:none}
       </ul>
     </div>
     <p class="mnote">Inclui 2 bebidas por pessoa: vinho da casa, água, refrigerantes ou cerveja. Bebidas adicionais pagas à parte.</p>
+    <p class="mlegal">Disponíveis até 6 de janeiro de 2027.<br>IVA incluído à taxa legal em vigor.</p>
+    <div class="modal-cta"><a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar</a></div>
+    </div>
+    <div class="mrail" aria-hidden="true"><span class="mthumb"></span></div>
+  </div>
+</div>
+<div class="modal" id="natal-presepio" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="natal-presepio-title">
+    <button type="button" class="modal-x" data-close aria-label="Fechar">&times;</button>
+    <div class="mbody">
+    <h2 id="natal-presepio-title" class="modal-h">Menu Presépio</h2>
+    <p class="mprice">27 € p/ pessoa</p>
+    <div class="mcat">
+      <h3>Para acompanhar</h3>
+      <ul>
+        <li><span>Couvert</span><small>Pão, azeitonas & salgadinhos</small></li>
+        <li><span>Batatas fritas caseiras</span><small>Quentinhas & estaladiças</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Petiscos ao centro</h3>
+      <ul>
+        <li><span>Ovos rotos</span><small>Batata frita & ovo a escorrer. À escolha: alheira, presunto ou cogumelos</small></li>
+        <li><span>Ovos mexidos com alheira</span><small>Cremosos, com alheira esfarelada</small></li>
+        <li><span>Pica-pau</span><small>Tiras de vitela salteadas com pickles, alho & cerveja</small></li>
+        <li><span>Iscas de fígado de cebolada</span><small>Fígado em vinha d'alhos, com cebolada lenta</small></li>
+        <li><span>Sardinha petinga</span><small>Frita & estaladiça, para comer à mão</small></li>
+        <li><span>Bacalhau à lagareiro lascado</span><small>Lascas de bacalhau com azeite & alho</small></li>
+        <li><span>Moelas</span><small>Estufadas lentamente em molho de tomate à moda da casa</small></li>
+        <li><span>Camarão salteado</span><small>Em alho, azeite & um toque de piri-piri</small></li>
+        <li><span>Pataniscas de bacalhau</span><small>Douradas e estaladiças, como manda a tradição</small></li>
+        <li><span>Peixinhos da horta</span><small>Feijão verde panado & estaladiço</small></li>
+        <li><span>Cogumelos salteados</span><small>Com alho, azeite & salsa</small></li>
+        <li><span>Brás de cogumelos</span><small>Batata palito caseira, cogumelos & salsa</small></li>
+      </ul>
+    </div>
+    <div class="mcat">
+      <h3>Para terminar</h3>
+      <ul>
+        <li><span>Café prendado</span><small>Acompanhado de um mimo de Natal</small></li>
+      </ul>
+    </div>
+    <p class="mnote">Mínimo 10 pessoas. Inclui 2 bebidas por pessoa: vinho da casa, água, refrigerantes ou cerveja. Bebidas adicionais pagas à parte.</p>
     <p class="mlegal">Disponíveis até 6 de janeiro de 2027.<br>IVA incluído à taxa legal em vigor.</p>
     <div class="modal-cta"><a class="btn" href="https://wa.me/351928057856?text=Ol%C3%A1%2C%20quero%20reservar%20um%20jantar%20de%20Natal" target="_blank" rel="noopener">Reservar</a></div>
     </div>
